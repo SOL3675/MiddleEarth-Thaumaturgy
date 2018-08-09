@@ -64,8 +64,8 @@ item.MaterialNuggets.durnaurOrc.name=Durnaur Lightened Orcsteel Nugget
 item.MaterialNuggets.guldurilUruk.name=Gulduril Infused Uruksteel Nugget
 item.MaterialNuggets.brightenGildediron.name=BrightenGems Gilded Iron Nugget
 #
-item.WandCores.gondor.name=Gondor Rock Rod
-item.Wand.gondor.rod=Gondor
+item.WandCores.GONDOR.name=Gondor Rock Rod
+item.Wand.GONDOR.rod=Gondor
 #
 item.WandCaps.mithril.name=Mithril Cap
 item.Wand.mithril.cap=Mithril Bossed

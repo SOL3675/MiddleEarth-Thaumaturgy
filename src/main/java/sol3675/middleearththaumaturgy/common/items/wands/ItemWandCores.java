@@ -19,7 +19,29 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 public class ItemWandCores extends Item{
 	
 	public final String[] types = {
-		"gondor"	
+		"GONDOR",
+		"HOBBIT",
+		"RANGER_NORTH",
+		"BLUE_MOUNTAINS",
+		"HIGH_ELF",
+		"GUNDABAD",
+		"ANGMAR",
+		"WOOD_ELF",
+		"DOL_GULDUR",
+		"DALE",
+		"DWARF",
+		"GALADHRIM",
+		"DUNLAND",
+		"URUK_HAI",
+		"FANGORN",
+		"ROHAN",
+		"MORDOR",
+		"DORWINION",
+		"RHUN",
+		"NEAR_HARAD",
+		"MOREDAIN",
+		"TAUREDAIN",
+		"HALF_TROLL"
 	};
 	
 	public IIcon[] icon;
@@ -55,7 +77,10 @@ public class ItemWandCores extends Item{
 		
 		ItemStack wand = new ItemStack(ConfigItems.itemWandCasting, 1, 72);
 		((ItemWandCasting) wand.getItem()).setCap(wand, (WandCap) WandCap.caps.get("mithril"));
-		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("gondor"));
+		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("GONDOR"));
+		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("HOBBIT"));
+		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("RANGER_NORTH"));
+		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("BLUE_MOUNTAINS"));
 		list.add(wand);
 		
 	}

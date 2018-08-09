@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.1.7e"
+version = "0.1.8b"
 group= "com.sol3675.middleearththaumaturgy"
 archivesBaseName = "middleearththaumaturgy"
 
