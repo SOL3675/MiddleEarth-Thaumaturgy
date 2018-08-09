@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="TravellersGear-1.7.10-1.16.6-deobf">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/TravellersGear-1.7.10-1.16.6-deobf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Thaumcraft-deobf-1.7.10-4.2.3.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MiddleEarth_Thaumaturgy.iml" filepath="$PROJECT_DIR$/MiddleEarth_Thaumaturgy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MiddleEarth_Thaumaturgy_api.iml" filepath="$PROJECT_DIR$/.idea/modules/MiddleEarth_Thaumaturgy_api.iml" group="MiddleEarth_Thaumaturgy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MiddleEarth_Thaumaturgy_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MiddleEarth_Thaumaturgy_main.iml" group="MiddleEarth_Thaumaturgy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MiddleEarth_Thaumaturgy_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MiddleEarth_Thaumaturgy_test.iml" group="MiddleEarth_Thaumaturgy" />
+    </modules>
+  </component>
+</project>
