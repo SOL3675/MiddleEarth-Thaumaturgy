@@ -22,15 +22,19 @@ public class FactionWandUpdate implements IWandRodOnUpdate{
 			duration = 0;
 			for(int i = 0; i < allAspects.length; ++i)
 			{
-				if(((ItemWandCasting)itemstack.getItem()).getVis(itemstack, allAspects[i]) < ((ItemWandCasting)itemstack.getItem()).getMaxVis(itemstack))
+				if(((ItemWandCasting)itemstack.getItem()).getVis(itemstack, allAspects[i]) < ((ItemWandCasting)itemstack.getItem()).getMaxVis(itemstack) * 0.9)
 				{
-					if(LOTRLevelData.getData(player).getAlignment(faction(itemstack))>100)
+					if(LOTRLevelData.getData(player).getAlignment(faction(itemstack))>=10000)
+					{
+						((ItemWandCasting)itemstack.getItem()).addRealVis(itemstack, allAspects[i], 50, true);
+					}
+					else if(LOTRLevelData.getData(player).getAlignment(faction(itemstack))>=1000)
 					{
 						((ItemWandCasting)itemstack.getItem()).addRealVis(itemstack, allAspects[i], 10, true);
 					}
-					if(LOTRLevelData.getData(player).getAlignment(faction(itemstack))>1000)
+					else if(LOTRLevelData.getData(player).getAlignment(faction(itemstack))>=100)
 					{
-						((ItemWandCasting)itemstack.getItem()).addRealVis(itemstack, allAspects[i], 20, true);
+						((ItemWandCasting)itemstack.getItem()).addRealVis(itemstack, allAspects[i], 5, true);
 					}
 				}
 			}	

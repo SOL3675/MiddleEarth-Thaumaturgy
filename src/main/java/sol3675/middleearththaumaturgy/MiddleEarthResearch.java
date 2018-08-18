@@ -25,8 +25,8 @@ public class MiddleEarthResearch {
 	public static void addResearch() {
 
 		ResearchCategories.registerCategory("MIDDLEEARTH", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/map.png"));
-		ResearchCategories.registerCategory("FREEPEOPLE", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/map.png"));
-		ResearchCategories.registerCategory("SAURON", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/map.png"));
+		ResearchCategories.registerCategory("FREEPEOPLE", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/freepeople.png"));
+		ResearchCategories.registerCategory("SAURON", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/sauron.png"));
 		
 		if(Loader.isModLoaded("lotr") == true) {
 			addBasicMaterials();
@@ -34,7 +34,8 @@ public class MiddleEarthResearch {
 		}
 
 		addCommon();
-		addGondor();
+		addFreePeople();
+		addSauron();
 
 	}
 	
@@ -244,21 +245,291 @@ public class MiddleEarthResearch {
 
 	}
 
-	public static void addGondor() {
+	public static void addFreePeople() {
 
 		(new MiddleEarthResearchItem(
-				"ROD_gondor",
+				"ROD_GONDOR",
 				"FREEPEOPLE",
 				(new AspectList()).add(MiddleEarthAspects.GONDOR, 5).add(Aspect.MAGIC, 1),
 				-1, -1, 2,
 				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 0))
 				)
 		.setPages(new ResearchPage[] {
-				new ResearchPage("middleearththaumaturgy.research_page.ROD_gondor.1")
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_GONDOR.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("RodGONDOR"))
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_HOBBIT",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.SHIRE, 5).add(Aspect.MAGIC, 1),
+				0, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 1))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_HOBBIT.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("RodHOBBIT"))
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_RANGER_NORTH",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DUNEDAIN, 5).add(Aspect.MAGIC, 1),
+				1, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 2))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_RANGER_NORTH.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("RodRANGER_NORTH"))
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_BLUE_MOUNTAINS",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.BLUEMOUNTAINS, 5).add(Aspect.MAGIC, 1),
+				2, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 3))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.BLUE_MOUNTAINS.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("RodBLUE_MOUNTAINS"))
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_HIGH_ELF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.LINDON, 5).add(Aspect.MAGIC, 1),
+				3, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 4))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_HIGH_ELF.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("RodHIGH_ELF"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
 
-
+		(new MiddleEarthResearchItem(
+				"ROD_WOOD_ELF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.WOODLAND, 5).add(Aspect.MAGIC, 1),
+				2, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 7))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_WOOD_ELF.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_DALE",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DALE, 5).add(Aspect.MAGIC, 1),
+				1, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 9))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_DALE.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_DWARF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.IRONHILLS, 5).add(Aspect.MAGIC, 1),
+				0, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 10))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_DWARF.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_GALADHRIM",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.LOTHLORIEN, 5).add(Aspect.MAGIC, 1),
+				-2, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 11))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_GALADHRIM.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_FANGORN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.FANGORN, 5).add(Aspect.MAGIC, 1),
+				-2, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 14))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_FANGORN.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_ROHAN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.ROHAN, 5).add(Aspect.MAGIC, 1),
+				-3, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 15))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_ROHAN.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_DORWINION",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DORWINION, 5).add(Aspect.MAGIC, 1),
+				-3, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 17))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_DORWINION.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_TAUREDAIN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.TAUREDAIN, 5).add(Aspect.MAGIC, 1),
+				-4, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 21))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_TAUREDAIN.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+	}
+	
+	public static void addSauron()
+	{
+		(new MiddleEarthResearchItem(
+				"ROD_GUNDABAD",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.GUNDABAD, 5).add(Aspect.MAGIC, 1),
+				-1, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 5))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_GUNDABAD.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_ANGMAR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.ANGMAR, 5).add(Aspect.MAGIC, 1),
+				0, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 6))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_ANGMAR.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_DOL_GULDUR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.DOLGULDUR, 5).add(Aspect.MAGIC, 1),
+				1, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 8))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_DOL_GULDUR.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_DUNLAND",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.DUNLAND, 5).add(Aspect.MAGIC, 1),
+				2, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 12))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_DUNLAND.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_URUK_HAI",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.ISENGARD, 5).add(Aspect.MAGIC, 1),
+				3, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 13))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_URUK_HAI.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_MORDOR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.MORDOR, 5).add(Aspect.MAGIC, 1),
+				2, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 16))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_MORDOR.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_RHUN",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.RHUDEL, 5).add(Aspect.MAGIC, 1),
+				1, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 18))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_RHUN.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_NEAR_HARAD",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.NEARHARAD, 5).add(Aspect.MAGIC, 1),
+				0, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 19))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_NEAR_HARAD.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_MOREDAIN",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.MOREDAIN, 5).add(Aspect.MAGIC, 1),
+				-3, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 20))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_MOREDAIN.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"ROD_HALF_TROLL",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.HALFTROLLS, 5).add(Aspect.MAGIC, 1),
+				-3, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 22))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_HALF_TROLL.1")
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
 	}
 
 }

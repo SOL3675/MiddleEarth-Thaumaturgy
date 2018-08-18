@@ -78,9 +78,6 @@ public class ItemWandCores extends Item{
 		ItemStack wand = new ItemStack(ConfigItems.itemWandCasting, 1, 72);
 		((ItemWandCasting) wand.getItem()).setCap(wand, (WandCap) WandCap.caps.get("mithril"));
 		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("GONDOR"));
-		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("HOBBIT"));
-		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("RANGER_NORTH"));
-		((ItemWandCasting) wand.getItem()).setRod(wand, (WandRod) WandRod.rods.get("BLUE_MOUNTAINS"));
 		list.add(wand);
 		
 	}
