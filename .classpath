@@ -67,5 +67,6 @@
 	<classpathentry kind="lib" path="lib/TravellersGear-1.7.10-1.16.6-deobf.jar"/>
 	<classpathentry kind="lib" path="lib/[1.7.10] LOTRMod B33.8.jar"/>
 	<classpathentry kind="lib" path="eclipse/mods/1.7.10/Baubles-1.7.10-1.0.1.10-deobf.jar"/>
+	<classpathentry kind="lib" path="lib/Automagy-1.7.10-0.28.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

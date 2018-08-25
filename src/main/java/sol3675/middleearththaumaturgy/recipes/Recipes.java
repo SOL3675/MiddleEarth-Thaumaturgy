@@ -2,6 +2,7 @@ package sol3675.middleearththaumaturgy.recipes;
 
 import cpw.mods.fml.common.Loader;
 import lotr.common.LOTRMod;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import sol3675.middleearththaumaturgy.MiddleEarthResearch;
@@ -15,6 +16,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.config.ConfigItems;
+import tuhljin.automagy.blocks.ModBlocks;
 
 public class Recipes {
 	
@@ -26,13 +28,29 @@ public class Recipes {
 			addWandRods();
 		}
 		
+		if(Loader.isModLoaded("Automagy"))
+		{
+			MiddleEarthResearch.recipes.put("BookshelfInventarium", 
+				ThaumcraftApi.addArcaneCraftingRecipe(
+					"BOOKSHELFINVENTARIUM",
+					new ItemStack(MiddleEarthThaumaturgyBlocks.bookshelfInventarium),
+					(new AspectList()).add(Aspect.ORDER, 200).add(Aspect.EARTH, 350).add(Aspect.AIR, 200),
+					new Object[] {"MMM", "BDB", "MMM",
+						Character.valueOf('M'), new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 5),
+						Character.valueOf('B'), new ItemStack(ModBlocks.enchantedBookshelf, 1, 0),
+						Character.valueOf('D'), new ItemStack(LOTRMod.diamond)
+					}
+				)
+			);
+		}
+		
 		addCommonRecipe();
 		
 		
 		
 	}
 	
-	public static void addBasicMaterialsRecipe() {
+	private static void addBasicMaterialsRecipe() {
 		
 		MiddleEarthResearch.recipes.put("GuldurilBlackUruk", 
 				ThaumcraftApi.addInfusionCraftingRecipe(
@@ -214,6 +232,25 @@ public class Recipes {
 				)
 		;
 		
+		MiddleEarthResearch.recipes.put("HandheldCrafter", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"HANDHELDCRAFTER", 
+						new ItemStack(MiddleEarthThaumaturgyItems.factionCrafter, 1, 0),
+						1,
+						(new AspectList().add(Aspect.CRAFT, 16)),
+						new ItemStack(Blocks.crafting_table),
+						new ItemStack[]
+								{
+								new ItemStack(LOTRMod.hobbitTable), new ItemStack(LOTRMod.rangerTable), new ItemStack(LOTRMod.blueDwarvenTable), new ItemStack(LOTRMod.highElvenTable), new ItemStack(LOTRMod.gundabadTable),
+								new ItemStack(LOTRMod.angmarTable), new ItemStack(LOTRMod.woodElvenTable), new ItemStack(LOTRMod.dolGuldurTable), new ItemStack(LOTRMod.daleTable), new ItemStack(LOTRMod.dwarvenTable),
+								new ItemStack(LOTRMod.elvenTable), new ItemStack(LOTRMod.dunlendingTable), new ItemStack(LOTRMod.urukTable), new ItemStack(LOTRMod.rohirricTable), new ItemStack(LOTRMod.gondorianTable),
+								new ItemStack(LOTRMod.dolAmrothTable), new ItemStack(LOTRMod.morgulTable), new ItemStack(LOTRMod.dorwinionTable), new ItemStack(LOTRMod.rhunTable), new ItemStack(LOTRMod.nearHaradTable),
+								new ItemStack(LOTRMod.moredainTable), new ItemStack(LOTRMod.tauredainTable), new ItemStack(LOTRMod.halfTrollTable), new ItemStack(LOTRMod.rivendellTable)
+								}
+						)
+				)
+		;
+		
 		MiddleEarthResearch.recipes.put("CapMithril", 
 				ThaumcraftApi.addInfusionCraftingRecipe(
 						"CAP_mithril", 
@@ -228,13 +265,13 @@ public class Recipes {
 		
 	}
 	
-	public static void addWandRods()
+	private static void addWandRods()
 	{
 		MiddleEarthResearch.recipes.put("RodGONDOR", 
 				ThaumcraftApi.addInfusionCraftingRecipe(
 						"ROD_GONDOR", 
 						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 0),
-						8,
+						6,
 						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.GONDOR, 24)),
 						new ItemStack(ConfigItems.itemWandRod, 1, 2),
 						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 0), new ItemStack(LOTRMod.rock, 1, 1), new ItemStack(LOTRMod.diamond, 1, 0)}
@@ -246,7 +283,7 @@ public class Recipes {
 				ThaumcraftApi.addInfusionCraftingRecipe(
 						"ROD_HOBBIT", 
 						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 1),
-						8,
+						6,
 						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.SHIRE, 24)),
 						new ItemStack(ConfigItems.itemWandRod, 1, 2),
 						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 21), new ItemStack(LOTRMod.wood, 1, 0), new ItemStack(LOTRMod.amber, 1, 0)}
@@ -258,7 +295,7 @@ public class Recipes {
 				ThaumcraftApi.addInfusionCraftingRecipe(
 						"ROD_RANGER_NORTH", 
 						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 2),
-						8,
+						6,
 						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.DUNEDAIN, 24)),
 						new ItemStack(ConfigItems.itemWandRod, 1, 2),
 						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 12), new ItemStack(LOTRMod.rangerBow, 1, 0), new ItemStack(LOTRMod.emerald, 1, 0)}
@@ -270,7 +307,7 @@ public class Recipes {
 				ThaumcraftApi.addInfusionCraftingRecipe(
 						"ROD_BLUE_MOUNTAINS", 
 						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 3),
-						8,
+						6,
 						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.BLUEMOUNTAINS, 24)),
 						new ItemStack(ConfigItems.itemWandRod, 1, 2),
 						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 11), new ItemStack(LOTRMod.rock, 1, 3), new ItemStack(LOTRMod.opal, 1, 0)}
@@ -282,10 +319,226 @@ public class Recipes {
 				ThaumcraftApi.addInfusionCraftingRecipe(
 						"ROD_HIGH_ELF", 
 						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 4),
-						8,
+						6,
 						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.LINDON, 24)),
 						new ItemStack(ConfigItems.itemWandRod, 1, 2),
 						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 10), new ItemStack(LOTRMod.quenditeCrystal, 1, 0), new ItemStack(LOTRMod.quenditeCrystal, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodGUNDABAD", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_GUNDABAD", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 5),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.GUNDABAD, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 14), new ItemStack(LOTRMod.gundabadUrukBow, 1, 0), new ItemStack(LOTRMod.nauriteGem, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodANGMAR", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_ANGMAR", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 6),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.ANGMAR, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 8), new ItemStack(LOTRMod.guldurilCrystal, 1, 0), new ItemStack(LOTRMod.amethyst, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodWOOD_ELF", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_WOOD_ELF", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 7),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.WOODLAND, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 4), new ItemStack(LOTRMod.topaz, 1, 0), new ItemStack(LOTRMod.leaves, 1, 3)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodDOL_GULDUR", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_DOL_GULDUR", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 8),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.DOLGULDUR, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 13), new ItemStack(LOTRMod.nauriteGem, 1, 0), new ItemStack(LOTRMod.brick2, 1, 8)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodDALE", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_DALE", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 9),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.DALE, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 19), new ItemStack(LOTRMod.daleCracker), new ItemStack(LOTRMod.ruby, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodDWARF", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_DWARF", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 10),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.IRONHILLS, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 7), new ItemStack(LOTRMod.brick, 1, 6), new ItemStack(LOTRMod.dwarfSteel, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodGALADHRIM", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_GALADHRIM", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 11),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.LOTHLORIEN, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 3), new ItemStack(LOTRMod.wood, 1, 1), new ItemStack(LOTRMod.quenditeCrystal, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodDUNLAND", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_DUNLAND", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 12),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.DUNLAND, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 5), new ItemStack(LOTRMod.dunlendingTrident, 1, 0), new ItemStack(LOTRMod.sapphire, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodURUK_HAI", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_URUK_HAI", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 13),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.ISENGARD, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 6), new ItemStack(LOTRMod.urukSteel, 1, 0), new ItemStack(LOTRMod.pearl, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodFANGORN", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_FANGORN", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 14),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.FANGORN, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.fangornPlant, 1, 0), new ItemStack(LOTRMod.fangornPlant, 1, 2), new ItemStack(LOTRMod.fangornPlant, 1, 3)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodROHAN", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_ROHAN", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 15),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.ROHAN, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 1), new ItemStack(LOTRMod.rock, 1, 2), new ItemStack(LOTRMod.opal, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodMORDOR", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_MORDOR", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 16),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.MORDOR, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 2), new ItemStack(LOTRMod.rock, 1, 0), new ItemStack(LOTRMod.guldurilCrystal, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodDORWINION", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_DORWINION", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 17),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.DORWINION, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 20), new ItemStack(LOTRMod.brick5, 1, 2), new ItemStack(LOTRMod.mugRedWine)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodRHUN", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_RHUN", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 18),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.RHUDEL, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 35), new ItemStack(LOTRMod.brick5, 1, 11), new ItemStack(LOTRMod.ruby, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodNEAR_HARAD", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_NEAR_HARAD", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 19),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.NEARHARAD, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 9), new ItemStack(LOTRMod.brick, 1, 15), new ItemStack(LOTRMod.amethyst, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodMOREDAIN", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_MOREDAIN", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 20),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.MOREDAIN, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 17), new ItemStack(LOTRMod.brick3, 1, 10), new ItemStack(LOTRMod.lionFur, 1, 0)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodTAUREDAIN", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_TAUREDAIN", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 21),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.TAUREDAIN, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 18), new ItemStack(LOTRMod.brick4, 1, 0), new ItemStack(LOTRMod.mugTauredainCocoa)}
+						)
+				)
+		;
+		
+		MiddleEarthResearch.recipes.put("RodHALF_TROLL", 
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_HALF_TROLL", 
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 22),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.HALFTROLLS, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 15), new ItemStack(LOTRMod.hammerHalfTroll, 1, 0), new ItemStack(LOTRMod.topaz, 1, 0)}
 						)
 				)
 		;

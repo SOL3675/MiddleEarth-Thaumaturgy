@@ -9,11 +9,11 @@ import sol3675.middleearththaumaturgy.MiddleEarthResearch;
 import sol3675.middleearththaumaturgy.MiddleEarthThaumaturgy;
 import sol3675.middleearththaumaturgy.aspect.LotrAspectRegister;
 import sol3675.middleearththaumaturgy.aspect.MiddleEarthAspects;
-import sol3675.middleearththaumaturgy.client.GuiHandler;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
 import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
 import sol3675.middleearththaumaturgy.common.tileentities.MiddleEarthThaumaturgyTileentities;
 import sol3675.middleearththaumaturgy.config.MeetCfg;
+import sol3675.middleearththaumaturgy.gui.GuiHandler;
 import sol3675.middleearththaumaturgy.recipes.GeneralRecipes;
 import sol3675.middleearththaumaturgy.recipes.Recipes;
 
@@ -35,7 +35,7 @@ public class CommonProxy{
 	public void init(FMLInitializationEvent event) {
 		
 		GeneralRecipes.addGeneralRecipes();
-		//NetworkRegistry.INSTANCE.registerGuiHandler(MiddleEarthThaumaturgy.instance, new GuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(MiddleEarthThaumaturgy.instance, new GuiHandler());
 		
 	}
 	
