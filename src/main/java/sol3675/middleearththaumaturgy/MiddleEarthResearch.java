@@ -9,6 +9,7 @@ import sol3675.middleearththaumaturgy.MiddleEarthResearchItem;
 import sol3675.middleearththaumaturgy.aspect.MiddleEarthAspects;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
 import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
+import sol3675.middleearththaumaturgy.references.LibMisc;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.IArcaneRecipe;
@@ -62,12 +63,28 @@ public class MiddleEarthResearch {
 				(new AspectList()).add(MiddleEarthAspects.MORDOR, 5).add(Aspect.MAGIC, 1).add(Aspect.METAL, 11),
 				-12,-8, 2,
 				new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 0))
-				)
+		)
 		.setPages(new ResearchPage[] {
 				new ResearchPage("middleearththaumaturgy.research_page.GULDURILBLACKURUK.1"),
 				new ResearchPage((InfusionRecipe) recipes.get("GuldurilBlackUruk"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem
+			(
+				"CAP_blackuruksteel",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.MORDOR, 3),
+				-12, -7, 0,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 7)
+			)
+		)
+		.setPages(new ResearchPage[]
+		{
+			new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_blackuruksteel")
+		})
+		.setParents(new String[] {"GULDURILBLACKURUK"}).registerResearchItem();
+		
 		
 		(new MiddleEarthResearchItem(
 				"ITHILDINBLUEDWARVEN",
@@ -82,6 +99,21 @@ public class MiddleEarthResearch {
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
 		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_bluedwarvensteel",
+					"FREEPEOPLE",
+					(new AspectList()).add(MiddleEarthAspects.BLUEMOUNTAINS, 3),
+					-12, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 6)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_bluedwarvensteel")
+			})
+		.setParents(new String[] {"ITHILDINBLUEDWARVEN"}).registerResearchItem();
+		
 		(new MiddleEarthResearchItem(
 				"ITHILDINDWARVEN",
 				"FREEPEOPLE",
@@ -94,6 +126,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("IthildinDwarven"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_dwarvensteel",
+					"FREEPEOPLE",
+					(new AspectList()).add(MiddleEarthAspects.IRONHILLS, 3),
+					-11, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 2)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_dwarvensteel")
+			})
+		.setParents(new String[] {"ITHILDINDWARVEN"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
 				"EDHELMIRELVEN",
@@ -108,6 +155,21 @@ public class MiddleEarthResearch {
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
 		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_elvensteel",
+					"FREEPEOPLE",
+					(new AspectList()).add(MiddleEarthAspects.ELVES, 3),
+					-10, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 8)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_elvensteel")
+			})
+		.setParents(new String[] {"EDHELMIRELVEN"}).registerResearchItem();
+		
 		(new MiddleEarthResearchItem(
 				"DAEDELOSGALVORN",
 				"FREEPEOPLE",
@@ -120,6 +182,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("DaedelosGalvorn"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_galvorn",
+					"FREEPEOPLE",
+					(new AspectList()).add(MiddleEarthAspects.ELVES, 3).add(MiddleEarthAspects.DWARVES, 3),
+					-9, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 3)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_galvorn")
+			})
+		.setParents(new String[] {"DAEDELOSGALVORN"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
 				"STAREDMITHRIL",
@@ -135,6 +212,19 @@ public class MiddleEarthResearch {
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
+				"CAP_mithril",
+				"MIDDLEEARTH",
+				(new AspectList()).add(Aspect.CRYSTAL, 5).add(Aspect.MAGIC, 1).add(Aspect.METAL, 11),
+				-12,-7, 3,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 0))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.CAP_mithril.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("CapMithril"))
+				}
+		).setParents(new String[] {"STAREDMITHRIL"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
 				"DAEDELOSMORGUL",
 				"SAURON",
 				(new AspectList()).add(MiddleEarthAspects.MORDOR, 5).add(Aspect.MAGIC, 1).add(Aspect.METAL, 11),
@@ -146,6 +236,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("DaedelosMorgul"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_morgul",
+					"SAURON",
+					(new AspectList()).add(MiddleEarthAspects.MORDOR, 3).add(MiddleEarthAspects.NAZGULS, 3),
+					-11, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 5)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_morgul")
+			})
+		.setParents(new String[] {"DAEDELOSMORGUL"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
 				"DURNAURORC",
@@ -160,6 +265,21 @@ public class MiddleEarthResearch {
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
 		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_orcsteel",
+					"SAURON",
+					(new AspectList()).add(MiddleEarthAspects.ORCS, 3),
+					-10, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 1)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_orcsteel")
+			})
+		.setParents(new String[] {"DURNAURORC"}).registerResearchItem();
+		
 		(new MiddleEarthResearchItem(
 				"GULDURILURUK",
 				"SAURON",
@@ -173,6 +293,21 @@ public class MiddleEarthResearch {
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
 		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_uruksteel",
+					"SAURON",
+					(new AspectList()).add(MiddleEarthAspects.ISENGARD, 3),
+					-9, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 4)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_uruksteel")
+			})
+		.setParents(new String[] {"GULDURILURUK"}).registerResearchItem();
+		
 		(new MiddleEarthResearchItem(
 				"BRIGHTENGILDEDIRON",
 				"MIDDLEEARTH",
@@ -185,6 +320,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("BrightenGildediron"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem
+				(
+					"CAP_gildediron",
+					"MIDDLEEARTH",
+					(new AspectList()).add(MiddleEarthAspects.RHUDEL, 3),
+					-11, -7, 0,
+					new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 9)
+				)
+			)
+			.setPages(new ResearchPage[]
+			{
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_gildediron")
+			})
+		.setParents(new String[] {"BRIGHTENGILDEDIRON"}).registerResearchItem();
 	}
 	
 	public static void addJars() {
@@ -258,19 +408,6 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("HandheldCrafter"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
-		(new MiddleEarthResearchItem(
-				"CAP_mithril",
-				"MIDDLEEARTH",
-				(new AspectList()).add(Aspect.CRYSTAL, 5).add(Aspect.MAGIC, 1).add(Aspect.METAL, 11),
-				-1,-1, 2,
-				new ItemStack(MiddleEarthThaumaturgyItems.wandCap, 1, 0))
-				)
-		.setPages(new ResearchPage[] {
-				new ResearchPage("middleearththaumaturgy.research_page.CAP_mithril.1"),
-				new ResearchPage((InfusionRecipe) recipes.get("CapMithril"))
-				}
-		).setParents(new String[] {"CAP_gold"}).registerResearchItem();
 
 	}
 

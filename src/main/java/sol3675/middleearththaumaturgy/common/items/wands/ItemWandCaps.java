@@ -15,16 +15,16 @@ public class ItemWandCaps extends Item{
 	
 	public final String[] types = {
 			
-			"mithril",
-			"orcsteel",
-			"dwarvensteel",
-			"galvorn",
-			"uruksteel",
-			"morgulsteel",
-			"bluedwarvensteel",
-			"blackuruksteel",
-			"elvensteel",
-			"gildediron"
+		"mithril",
+		"orcsteel",
+		"dwarvensteel",
+		"galvorn",
+		"uruksteel",
+		"morgulsteel",
+		"bluedwarvensteel",
+		"blackuruksteel",
+		"elvensteel",
+		"gildediron"
 			
 	};
 	

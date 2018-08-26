@@ -11,7 +11,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import sol3675.middleearththaumaturgy.proxy.CommonProxy;
 import sol3675.middleearththaumaturgy.references.LibMisc;
 
-@Mod(modid = LibMisc.MODID, name = LibMisc.MODNAME, version = LibMisc.VERSION)
+@Mod(modid = LibMisc.MODID, name = LibMisc.MODNAME, version = LibMisc.VERSION, dependencies = LibMisc.DEPENDENCIES)
 
 public class MiddleEarthThaumaturgy {
 	
