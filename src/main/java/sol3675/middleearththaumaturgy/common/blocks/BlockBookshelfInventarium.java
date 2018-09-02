@@ -2,16 +2,24 @@ package sol3675.middleearththaumaturgy.common.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import lotr.common.LOTRMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import sol3675.middleearththaumaturgy.MiddleEarthResearch;
 import sol3675.middleearththaumaturgy.MiddleEarthThaumaturgy;
+import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
 import sol3675.middleearththaumaturgy.references.LibMisc;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
 import tuhljin.automagy.blocks.IInventariumSlotUpgrade;
+import tuhljin.automagy.blocks.ModBlocks;
 
 public class BlockBookshelfInventarium extends Block implements IInventariumSlotUpgrade{
 	
@@ -76,6 +84,22 @@ public class BlockBookshelfInventarium extends Block implements IInventariumSlot
 		else {
 			return sides;
 		}
+	}
+	
+	public static void addRecipeAutomagy()
+	{
+		MiddleEarthResearch.recipes.put("BookshelfInventarium", 
+				ThaumcraftApi.addArcaneCraftingRecipe(
+					"BOOKSHELFINVENTARIUM",
+					new ItemStack(MiddleEarthThaumaturgyBlocks.bookshelfInventarium),
+					(new AspectList()).add(Aspect.ORDER, 200).add(Aspect.EARTH, 350).add(Aspect.AIR, 200),
+					new Object[] {"MMM", "BDB", "MMM",
+						Character.valueOf('M'), new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 5),
+						Character.valueOf('B'), new ItemStack(ModBlocks.enchantedBookshelf, 1, 0),
+						Character.valueOf('D'), new ItemStack(LOTRMod.diamond)
+					}
+				)
+			);
 	}
 
 }

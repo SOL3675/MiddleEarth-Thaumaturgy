@@ -81,8 +81,9 @@ public class MiddleEarthResearch {
 		)
 		.setPages(new ResearchPage[]
 		{
-			new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_blackuruksteel")
+			new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_blackuruksteel"),
 		})
+		.setSecondary()
 		.setParents(new String[] {"GULDURILBLACKURUK"}).registerResearchItem();
 		
 		
@@ -112,6 +113,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_bluedwarvensteel")
 			})
+		.setSecondary()
 		.setParents(new String[] {"ITHILDINBLUEDWARVEN"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
@@ -140,6 +142,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_dwarvensteel")
 			})
+			.setSecondary()
 		.setParents(new String[] {"ITHILDINDWARVEN"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
@@ -168,6 +171,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_elvensteel")
 			})
+			.setSecondary()
 		.setParents(new String[] {"EDHELMIRELVEN"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
@@ -196,6 +200,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_galvorn")
 			})
+			.setSecondary()
 		.setParents(new String[] {"DAEDELOSGALVORN"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
@@ -222,7 +227,9 @@ public class MiddleEarthResearch {
 				new ResearchPage("middleearththaumaturgy.research_page.CAP_mithril.1"),
 				new ResearchPage((InfusionRecipe) recipes.get("CapMithril"))
 				}
-		).setParents(new String[] {"STAREDMITHRIL"}).registerResearchItem();
+		)
+		.setSecondary()
+		.setParents(new String[] {"STAREDMITHRIL"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
 				"DAEDELOSMORGUL",
@@ -250,6 +257,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_morgul")
 			})
+			.setSecondary()
 		.setParents(new String[] {"DAEDELOSMORGUL"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
@@ -278,6 +286,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_orcsteel")
 			})
+			.setSecondary()
 		.setParents(new String[] {"DURNAURORC"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
@@ -306,6 +315,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_uruksteel")
 			})
+			.setSecondary()
 		.setParents(new String[] {"GULDURILURUK"}).registerResearchItem();
 		
 		(new MiddleEarthResearchItem(
@@ -334,6 +344,7 @@ public class MiddleEarthResearch {
 			{
 				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_gildediron")
 			})
+			.setSecondary()
 		.setParents(new String[] {"BRIGHTENGILDEDIRON"}).registerResearchItem();
 	}
 	

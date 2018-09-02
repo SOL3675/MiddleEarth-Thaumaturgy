@@ -16,7 +16,7 @@
 注意:詳細は、-Xlint:uncheckedオプションを指定して再コンパイルしてください。
 警告1個
 
-:processResources
+:processResources UP-TO-DATE
 :classes
 :jar
 :compileTestJava UP-TO-DATE
@@ -34,4 +34,4 @@
 
 BUILD SUCCESSFUL
 
-Total time: 51.544 secs
+Total time: 7.585 secs

@@ -5,7 +5,7 @@ This is one of the minecraft mod that add contents themed LotR and Thaumcraft 4.
 - The Lord of the Rings mod
 - Baubles
 - Thaumcraft 4
-- TravellersGear
+- TravellersGear(Optional)
 - Automagy(Optional)
 
 ## Authors

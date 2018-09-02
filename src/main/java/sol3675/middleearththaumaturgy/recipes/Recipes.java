@@ -16,7 +16,6 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.common.config.ConfigBlocks;
 import thaumcraft.common.config.ConfigItems;
-import tuhljin.automagy.blocks.ModBlocks;
 
 public class Recipes {
 	
@@ -28,25 +27,7 @@ public class Recipes {
 			addWandRods();
 		}
 		
-		if(Loader.isModLoaded("Automagy"))
-		{
-			MiddleEarthResearch.recipes.put("BookshelfInventarium", 
-				ThaumcraftApi.addArcaneCraftingRecipe(
-					"BOOKSHELFINVENTARIUM",
-					new ItemStack(MiddleEarthThaumaturgyBlocks.bookshelfInventarium),
-					(new AspectList()).add(Aspect.ORDER, 200).add(Aspect.EARTH, 350).add(Aspect.AIR, 200),
-					new Object[] {"MMM", "BDB", "MMM",
-						Character.valueOf('M'), new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 5),
-						Character.valueOf('B'), new ItemStack(ModBlocks.enchantedBookshelf, 1, 0),
-						Character.valueOf('D'), new ItemStack(LOTRMod.diamond)
-					}
-				)
-			);
-		}
-		
 		addCommonRecipe();
-		
-		
 		
 	}
 	

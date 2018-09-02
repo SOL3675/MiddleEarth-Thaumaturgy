@@ -3,6 +3,7 @@ package sol3675.middleearththaumaturgy.common.items.tgstuff;
 import java.util.ArrayList;
 import java.util.List;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -44,7 +45,7 @@ public class ItemTitle extends Item implements ITravellersGear{
 	
 	public ArrayList<ItemStack> getSubItems(){
 		ArrayList<ItemStack> list = new ArrayList<ItemStack>();
-		for(String title : TitlesTG.titles) {
+		for(String title : TitlesTG.TITLES) {
 			ItemStack stack = new ItemStack(this);
 			stack.setTagCompound(new NBTTagCompound());
 			stack.getTagCompound().setString("title", LibMisc.MODID + ".title_" + title);
@@ -81,10 +82,10 @@ public class ItemTitle extends Item implements ITravellersGear{
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerIcons(IIconRegister ir) {
-		icons = new IIcon[TitlesTG.titles.length];
+		icons = new IIcon[TitlesTG.TITLES.length];
 		
-		for(int i = 0; i<TitlesTG.titles.length; ++i) {
-			icons[i] = ir.registerIcon("middleearththaumaturgy:title_" + TitlesTG.titles[i]);
+		for(int i = 0; i<TitlesTG.TITLES.length; ++i) {
+			icons[i] = ir.registerIcon("middleearththaumaturgy:title_" + TitlesTG.TITLES[i]);
 		}
 		
 	}
@@ -92,6 +93,14 @@ public class ItemTitle extends Item implements ITravellersGear{
 	@SideOnly(Side.CLIENT)
 	public IIcon getIconFromDamage(int meta) {
 		return this.icons[meta];
+	}
+	
+	public static void addTitleItems()
+	{
+		ItemTitle titles;
+		titles = new ItemTitle();
+		titles.setUnlocalizedName(LibMisc.MODID.toLowerCase() + ':' + "titleItem");
+		GameRegistry.registerItem(titles, "titleItem");
 	}
 
 }

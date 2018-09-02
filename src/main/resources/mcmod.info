@@ -7,10 +7,10 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["SOL3675"],
+  "authorList": ["Coding: SOL3675"],["Artists: SOL3675, Rei Rokusanami"]
   "credits": "",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["the Lord of the Rings Mod"],["Thaumcraft 4"]
 }
 ]

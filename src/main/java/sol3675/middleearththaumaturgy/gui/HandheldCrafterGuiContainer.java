@@ -7,8 +7,14 @@ import lotr.common.LOTRMod;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatComponentTranslation;
+import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import sol3675.middleearththaumaturgy.MiddleEarthThaumaturgy;
+import sol3675.middleearththaumaturgy.common.items.ItemHandheldFactionCrafter;
+import sol3675.middleearththaumaturgy.references.GuiIDs;
 import sol3675.middleearththaumaturgy.references.LibMisc;
 
 public class HandheldCrafterGuiContainer extends GuiContainer{
@@ -75,216 +81,288 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 		if(button.id == 0)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HOBBIT)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 44, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_HOBBIT);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.hobbit"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HOBBIT);
 			}
 		}
 		if(button.id == 1)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.RANGER_NORTH)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 28, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_RANGER);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.ranger"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.RANGER_NORTH);
 			}
 		}
 		if(button.id == 2)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.BLUE_MOUNTAINS)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 27, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_BLUE_MOUNTAINS);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.blue_mountains"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.BLUE_MOUNTAINS);
 			}
 		}
 		if(button.id == 3)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HIGH_ELF)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 26, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_LINDON);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.lindon"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HIGH_ELF);
 			}
 		}
 		if(button.id == 4)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GUNDABAD)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 31, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_GUNDABAD);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.gundabad"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GUNDABAD);
 			}
 		}
 		if(button.id == 5)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.ANGMAR)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 23, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_ANGMAR);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.angmar"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.ANGMAR);
 			}
 		}
 		if(button.id == 6)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.WOOD_ELF)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 12, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_WOOD_ELF);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.wood_elf"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.WOOD_ELF);
 			}
 		}
 		if(button.id == 7)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DOL_GULDUR)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 30, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DOL_GULDUR);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.dol_guldur"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DOL_GULDUR);
 			}
 		}
 		if(button.id == 8)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DALE)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 42, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DALISH);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.dalish"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DALE);
 			}
 		}
 		if(button.id == 9)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DWARF)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 4, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DWARVEN);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.dwarven"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DWARF);
 			}
 		}
 		if(button.id == 10)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GALADHRIM)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 2, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_GALADHRIM);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.galadhrim"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GALADHRIM);
 			}
 		}
 		if(button.id == 11)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DUNLAND)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 18, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DUNLENDING);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.dunlending"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DUNLAND);
 			}
 		}
 		if(button.id == 12)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.URUK_HAI)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 8, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_URUK);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.uruk"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.URUK_HAI);
 			}
 		}
 		if(button.id == 13)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.ROHAN)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 14, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_ROHIRRIC);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.rohirric"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.ROHAN);
 			}
 		}
 		if(button.id == 14)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GONDOR)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 13, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_GONDORIAN);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.gondorian"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GONDOR);
 			}
 		}
 		if(button.id == 15)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GONDOR)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 36, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DOL_AMROTH);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.dol_amroth"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GONDOR);
 			}
 		}
 		if(button.id == 16)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.MORDOR)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 1, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_MORGUL);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.morgul"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.MORDOR);
 			}
 		}
 		if(button.id == 17)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DORWINION)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 43, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DORWINION);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.dorwinion"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DORWINION);
 			}
 		}
 		if(button.id == 18)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.RHUN)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 49, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_RHUNIC);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.rhunic"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.RHUN);
 			}
 		}
 		if(button.id == 19)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.NEAR_HARAD)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 25, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_HARADRIC);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.haradric"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.NEAR_HARAD);
 			}
 		}
 		if(button.id == 20)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.MOREDAIN)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 37, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_MOREDAIN);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.moredain"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.MOREDAIN);
 			}
 		}
 		if(button.id == 21)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.TAUREDAIN)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 39, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_TAUREDAIN);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.tauredain"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.TAUREDAIN);
 			}
 		}
 		if(button.id == 22)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HALF_TROLL)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 34, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_HALF_TROLL);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.half_troll"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HALF_TROLL);
 			}
 		}
 		if(button.id == 23)
 		{
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HIGH_ELF)>0) {
-				GuiOpener.openGui(LOTRMod.instance, 51, world, xCoord, yCoord, zCoord);
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_RIVENDELL);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.rivendell"));
 			}
 			else {
+				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HIGH_ELF);
 			}
 		}

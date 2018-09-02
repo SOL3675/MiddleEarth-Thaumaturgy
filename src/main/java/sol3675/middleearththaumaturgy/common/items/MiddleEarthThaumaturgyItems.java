@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import sol3675.middleearththaumaturgy.MiddleEarthThaumaturgy;
 import sol3675.middleearththaumaturgy.common.items.baubles.ItemRingWarpward;
-import sol3675.middleearththaumaturgy.common.items.tgstuff.ItemTitle;
 import sol3675.middleearththaumaturgy.common.items.wands.FactionWandUpdate;
 import sol3675.middleearththaumaturgy.common.items.wands.ItemWandCaps;
 import sol3675.middleearththaumaturgy.common.items.wands.ItemWandCores;
@@ -62,9 +61,7 @@ public class MiddleEarthThaumaturgyItems {
 	public static WandCap WAND_CAP_BLACKURUKSTEEL;
 	public static WandCap WAND_CAP_ELVENSTEEL;
 	public static WandCap WAND_CAP_GILDEDIRON;
-
-	public static ItemTitle titles;
-
+	
 	public static ItemRingWarpward ringWarpward;
 
 	public static void addItems() {
@@ -109,20 +106,16 @@ public class MiddleEarthThaumaturgyItems {
 		WAND_ROD_TAUREDAIN = new WandRod("TAUREDAIN", 100, new ItemStack(wandCore, 1, 21), 12, new FactionWandUpdate(), new ResourceLocation("middleearththaumaturgy","textures/models/wand_rod_tauredain.png"));
 		WAND_ROD_HALF_TROLL = new WandRod("HALF_TROLL", 100, new ItemStack(wandCore, 1, 22), 12, new FactionWandUpdate(), new ResourceLocation("middleearththaumaturgy","textures/models/wand_rod_half_troll.png"));
 		
-		WAND_CAP_MITHRIL = new MiddleEarthWandCap("mithril", 0.8F, new ItemStack(wandCap, 1, 0), 6, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_mithril.png"));
+		WAND_CAP_MITHRIL = new MiddleEarthWandCap("mithril", 0.65F, new ItemStack(wandCap, 1, 0), 6, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_mithril.png"));
 		WAND_CAP_ORCSTEEL = new MiddleEarthWandCap("orcsteel", 0.95F, new ItemStack(wandCap, 1, 1), 4, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_orcsteel.png"));
 		WAND_CAP_DWARVENSTEEL = new MiddleEarthWandCap("dwarvensteel", 0.95F, new ItemStack(wandCap, 1, 2), 4, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_dwarvensteel.png"));
-		WAND_CAP_GALVORN = new MiddleEarthWandCap("galvorn", 0.85F, new ItemStack(wandCap, 1, 3), 5, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_galvorn.png"));
+		WAND_CAP_GALVORN = new MiddleEarthWandCap("galvorn", 0.8F, new ItemStack(wandCap, 1, 3), 5, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_galvorn.png"));
 		WAND_CAP_URUKSTEEL = new MiddleEarthWandCap("uruksteel", 0.95F, new ItemStack(wandCap, 1, 4), 4, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_uruksteel.png"));
-		WAND_CAP_MORGULSTEEL = new MiddleEarthWandCap("morgulsteel", 0.85F, new ItemStack(wandCap, 1, 5), 5, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_morgulsteel.png"));
+		WAND_CAP_MORGULSTEEL = new MiddleEarthWandCap("morgulsteel", 0.8F, new ItemStack(wandCap, 1, 5), 5, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_morgulsteel.png"));
 		WAND_CAP_BLUEDWARVENSTEEL = new MiddleEarthWandCap("bluedwarvensteel", 0.95F, new ItemStack(wandCap, 1, 6), 4, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_bluedwarvensteel.png"));
 		WAND_CAP_BLACKURUKSTEEL = new MiddleEarthWandCap("blackuruksteel", 0.9F, new ItemStack(wandCap, 1, 7), 4, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_blackuruksteel.png"));
 		WAND_CAP_ELVENSTEEL = new MiddleEarthWandCap("elvensteel", 0.9F, new ItemStack(wandCap, 1, 8), 4, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_elvensteel.png"));
 		WAND_CAP_GILDEDIRON = new MiddleEarthWandCap("gildediron", 0.95F, new ItemStack(wandCap, 1, 9), 4, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_gildediron.png"));
-
-		titles = new ItemTitle();
-		titles.setUnlocalizedName(LibMisc.MODID.toLowerCase() + ':' + "titleItem");
-		GameRegistry.registerItem(titles, "titleItem");
 
 		ringWarpward = new ItemRingWarpward();
 		GameRegistry.registerItem(ringWarpward, "ItemRingWarpward");

@@ -1,5 +1,6 @@
 package sol3675.middleearththaumaturgy.proxy;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -9,8 +10,10 @@ import sol3675.middleearththaumaturgy.MiddleEarthResearch;
 import sol3675.middleearththaumaturgy.MiddleEarthThaumaturgy;
 import sol3675.middleearththaumaturgy.aspect.LotrAspectRegister;
 import sol3675.middleearththaumaturgy.aspect.MiddleEarthAspects;
+import sol3675.middleearththaumaturgy.common.blocks.BlockBookshelfInventarium;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
 import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
+import sol3675.middleearththaumaturgy.common.items.tgstuff.ItemTitle;
 import sol3675.middleearththaumaturgy.common.tileentities.MiddleEarthThaumaturgyTileentities;
 import sol3675.middleearththaumaturgy.config.MeetCfg;
 import sol3675.middleearththaumaturgy.gui.GuiHandler;
@@ -27,6 +30,9 @@ public class CommonProxy{
 		MeetCfg.configurate(event.getSuggestedConfigurationFile());
 		MiddleEarthAspects.initAspects();
 		MiddleEarthThaumaturgyItems.addItems();
+		if(Loader.isModLoaded("TravellersGear") == true) {
+			ItemTitle.addTitleItems();
+		}
 		MiddleEarthThaumaturgyBlocks.addBlocks();
 		MiddleEarthThaumaturgyTileentities.addTileentities();
 		
@@ -41,6 +47,10 @@ public class CommonProxy{
 	
 	public void postInit(FMLPostInitializationEvent event) {
 		Recipes.addRecipes();
+		if(Loader.isModLoaded("Automagy"))
+		{
+			BlockBookshelfInventarium.addRecipeAutomagy();
+		}
 		MiddleEarthResearch.addResearch();
 		LotrAspectRegister.setAspectLotr();
 		
