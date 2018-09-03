@@ -121,8 +121,8 @@ item.WandCaps.dwarvensteel.name=Dwarvensteel Cap
 item.Wand.dwarvensteel.cap=Dwarvensteel Bossed
 item.WandCaps.galvorn.name=Galvorn Cap
 item.Wand.galvorn.cap=Galvorn Bossed
-item.WandCaps.urksteel.name=Uruksteel Cap
-item.Wand.urksteel.cap=Uruksteel Bossed
+item.WandCaps.uruksteel.name=Uruksteel Cap
+item.Wand.uruksteel.cap=Uruksteel Bossed
 item.WandCaps.morgulsteel.name=Morgulsteel Cap
 item.Wand.morgulsteel.cap=Morgulsteel Bossed
 item.WandCaps.bluedwarvensteel.name=Blue Dwarvensteel Cap
@@ -319,3 +319,6 @@ middleearththaumaturgy.research_name.BOOKSHELFINVENTARIUM=Star Infused Bookshelf
 middleearththaumaturgy.research_textBOOKSHELFINVENTARIUM=Unlimited Potential!
 middleearththaumaturgy.research_page.BOOKSHELFINVENTARIUM.1=This Bookshelf provides 1,048,576 slots to Inventarium.
 #
+#chat message
+chat.mett.setFaction=Crafter set faction
+chat.mett.hobbit=Hobbit

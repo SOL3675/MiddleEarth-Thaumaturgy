@@ -1,6 +1,7 @@
 package sol3675.middleearththaumaturgy.aspect;
 
 import cpw.mods.fml.common.Loader;
+import lotr.common.LOTRMod;
 import net.minecraft.item.ItemStack;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
 import sol3675.middleearththaumaturgy.helper.LotrBlocks;
@@ -1032,6 +1033,16 @@ public class LotrAspectRegister {
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.arrowPoisoned"),1 ,0), new AspectList().add(Weapon, 1).add(Poison, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.crossbowBoltPoisoned"),1 ,0), new AspectList().add(Metal, 2).add(Weapon, 1).add(Poison, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.balrogFire"),1 ,0), new AspectList().add(Fire, 8).add(Balrogs, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.topaz), new AspectList().add(Crystal, 4).add(Fire, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.amethyst), new AspectList().add(Crystal, 4).add(Aura, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.sapphire), new AspectList().add(Crystal, 4).add(Heal, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.ruby), new AspectList().add(Crystal, 4).add(Energy, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.amber), new AspectList().add(Crystal, 2).add(Trap, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.diamond), new AspectList().add(Crystal, 4).add(Greed, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.pearl), new AspectList().add(Crystal, 2).add(Exchange, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.coral), new AspectList().add(Crystal, 2).add(Water, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.opal), new AspectList().add(Crystal, 2).add(Immortal, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.emerald), new AspectList().add(Crystal, 4).add(Greed, 5));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.chilling"),1 ,0), new AspectList().add(Cold, 8).add(Magic, 2).add(Utumno, 2));
 		}
 		catch(Exception e){

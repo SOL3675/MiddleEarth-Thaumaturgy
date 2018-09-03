@@ -3,6 +3,7 @@ package sol3675.middleearththaumaturgy;
 import java.util.HashMap;
 
 import cpw.mods.fml.common.Loader;
+import lotr.common.LOTRMod;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import sol3675.middleearththaumaturgy.MiddleEarthResearchItem;
@@ -12,6 +13,7 @@ import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
 import sol3675.middleearththaumaturgy.references.LibMisc;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.crafting.CrucibleRecipe;
 import thaumcraft.api.crafting.IArcaneRecipe;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchCategories;
@@ -29,11 +31,8 @@ public class MiddleEarthResearch {
 		ResearchCategories.registerCategory("FREEPEOPLE", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/freepeople.png"));
 		ResearchCategories.registerCategory("SAURON", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/sauron.png"));
 		
-		if(Loader.isModLoaded("lotr") == true) {
-			addBasicMaterials();
-			addJars();
-		}
-
+		addBasicMaterials();
+		addJars();
 		addCommon();
 		addFreePeople();
 		addSauron();
@@ -56,7 +55,7 @@ public class MiddleEarthResearch {
 
 	}
 	
-	public static void addBasicMaterials() {
+	private static void addBasicMaterials() {
 		(new MiddleEarthResearchItem(
 				"GULDURILBLACKURUK",
 				"SAURON",
@@ -246,7 +245,7 @@ public class MiddleEarthResearch {
 		
 		(new MiddleEarthResearchItem
 				(
-					"CAP_morgul",
+					"CAP_morgulsteel",
 					"SAURON",
 					(new AspectList()).add(MiddleEarthAspects.MORDOR, 3).add(MiddleEarthAspects.NAZGULS, 3),
 					-11, -7, 0,
@@ -255,7 +254,7 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_morgul")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_morgulsteel")
 			})
 			.setSecondary()
 		.setParents(new String[] {"DAEDELOSMORGUL"}).registerResearchItem();
@@ -348,7 +347,7 @@ public class MiddleEarthResearch {
 		.setParents(new String[] {"BRIGHTENGILDEDIRON"}).registerResearchItem();
 	}
 	
-	public static void addJars() {
+	private static void addJars() {
 		
 		(new MiddleEarthResearchItem(
 				"COMP_JAR",
@@ -392,7 +391,7 @@ public class MiddleEarthResearch {
 		
 	}
 
-	public static void addCommon() {
+	private static void addCommon() {
 
 		(new MiddleEarthResearchItem(
 				"RING_warpward",
@@ -420,9 +419,22 @@ public class MiddleEarthResearch {
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
 
+		(new MiddleEarthResearchItem(
+				"GEMTRANSMETT",
+				"MIDDLEEARTH",
+				(new AspectList()).add(Aspect.CRYSTAL, 8).add(MiddleEarthAspects.IMMORTAL, 2).add(Aspect.EXCHANGE, 8),
+				-5,-1, 2,
+				new ItemStack(LOTRMod.diamond))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.GEMTRANSMETT.1"),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransTopaz"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ALCHEMICALDUPLICATION"}).registerResearchItem();
 	}
 
-	public static void addFreePeople() {
+	private static void addFreePeople() {
 
 		(new MiddleEarthResearchItem(
 				"ROD_GONDOR",
@@ -594,7 +606,7 @@ public class MiddleEarthResearch {
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
 	}
 	
-	public static void addSauron()
+	private static void addSauron()
 	{
 		(new MiddleEarthResearchItem(
 				"ROD_GUNDABAD",
