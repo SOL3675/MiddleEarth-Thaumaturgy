@@ -175,7 +175,7 @@ public class LotrAspectRegister {
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.elvenCraftingTable"),1 ,0), new AspectList().add(Craft, 4).add(Lothlorien, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.mallornLadder"),1 ,0), new AspectList().add(Tree, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.orcSteelBars"),1 ,0), new AspectList().add(Metal, 1));
-			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.athelas"),1 ,0), new AspectList().add(Plant, 2).add(Air, 1).add(Immortal, 6));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.athelas"),1 ,0), new AspectList().add(Plant, 2).add(Air, 1).add(Wizards, 6));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.stalactite"),1 ,0), new AspectList().add(Earth, 2).add(Trap, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.stalactite"),1 ,1), new AspectList().add(Earth, 2).add(Trap, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.oreQuendite"),1 ,0), new AspectList().add(Crystal, 3).add(Earth, 1).add(Elves, 1).add(Light, 1));
@@ -398,6 +398,15 @@ public class LotrAspectRegister {
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.stalactiteObsidian"),1 ,0), new AspectList().add(Earth, 1).add(Darkness, 1).add(Trap, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.stalactiteObsidian"),1 ,1), new AspectList().add(Earth, 1).add(Darkness, 1).add(Trap, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.tauredainDartTrapObsidian"),1 ,0), new AspectList().add(Earth, 6).add(Darkness, 2).add(Trap, 2).add(Tauredain, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,0), new AspectList().add(Earth, 1).add(Crystal, 3).add(Fire, 3));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,1), new AspectList().add(Earth, 1).add(Crystal, 3).add(Aura, 3));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,2), new AspectList().add(Earth, 1).add(Crystal, 3).add(Heal, 3));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,3), new AspectList().add(Earth, 1).add(Crystal, 3).add(Energy, 3));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,4), new AspectList().add(Earth, 1).add(Trap, 3).add(Crystal, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,5), new AspectList().add(Earth, 1).add(Crystal, 3).add(Greed, 3));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,6), new AspectList().add(Earth, 1).add(Crystal, 1).add(Immortal, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,7), new AspectList().add(Earth, 1).add(Crystal, 3).add(Greed, 4));
+			
 			//lotr items
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.mithril"),1 ,0), new AspectList().add(Metal, 3).add(Dwarves, 1).add(Immortal, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.mithrilNugget"),1 ,0), new AspectList().add(Metal, 1));
