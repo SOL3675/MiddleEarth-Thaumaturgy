@@ -1,4 +1,4 @@
-![MEET logo](https://raw.github.com/SOL3675/MiddleEarth-Thaumaturgy/blob/master/src/main/resources/assets/middleearththaumaturgy/logo.png)
+![MEET logo](https://raw.githubusercontent.com/SOL3675/MiddleEarth-Thaumaturgy/master/src/main/resources/assets/middleearththaumaturgy/logo.png)
 # MiddleEarth-Thaumaturgy
 This is one of the minecraft mod that add contents themed LotR and Thaumcraft 4.
 
