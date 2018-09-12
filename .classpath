@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/api/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/SOL/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/forgeSrc-1.7.10-10.13.4.1614-1.7.10.jar" sourcepath="C:/Users/SOL/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/forgeSrc-1.7.10-10.13.4.1614-1.7.10-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/SOL/.gradle/caches/modules-2/files-2.1/net.minecraft/launchwrapper/1.12/111e7bea9c968cdb3d06ef4632bf7ff0824d0f36/launchwrapper-1.12.jar" sourcepath="C:/Users/SOL/.gradle/caches/modules-2/files-2.1/net.minecraft/launchwrapper/1.12/fd80cad9a1b967ce2ff20529dc54e520d5338d7/launchwrapper-1.12-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/SOL/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"/>
@@ -65,8 +65,8 @@
 	<classpathentry exported="true" kind="lib" path="C:/Users/SOL/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1614-1.7.10/start"/>
 	<classpathentry kind="lib" path="lib/Thaumcraft-deobf-1.7.10-4.2.3.5.jar"/>
 	<classpathentry kind="lib" path="lib/TravellersGear-1.7.10-1.16.6-deobf.jar"/>
-	<classpathentry kind="lib" path="lib/[1.7.10] LOTRMod B33.8.jar"/>
 	<classpathentry kind="lib" path="eclipse/mods/1.7.10/Baubles-1.7.10-1.0.1.10-deobf.jar"/>
 	<classpathentry kind="lib" path="lib/Automagy-1.7.10-0.28.2.jar"/>
+	<classpathentry kind="lib" path="lib/LOTRMod v34.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

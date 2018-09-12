@@ -61,6 +61,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 		this.buttonList.add(new GuiButton(21, this.guiLeft + 82, 50 + 200, 64, 16, "Tauredain"));
 		this.buttonList.add(new GuiButton(22, this.guiLeft + 10, 50 + 218, 64, 16, "Half-troll"));
 		this.buttonList.add(new GuiButton(23, this.guiLeft + 82, 50 + 218, 64, 16, "Rivendell"));
+		this.buttonList.add(new GuiButton(24, this.guiLeft + 10, 50 + 236, 64, 16, "Umbaric"));
+		this.buttonList.add(new GuiButton(25, this.guiLeft + 82, 50 + 236, 64, 16, "Gulfen"));
 	}
 
 	@Override
@@ -78,8 +80,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 	@Override
 	protected void actionPerformed(GuiButton button)
 	{
-		if(button.id == 0)
-		{
+		switch(button.id) {
+		case 0:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HOBBIT)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_HOBBIT);
 				GuiOpener.closeScreen();
@@ -89,9 +91,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HOBBIT);
 			}
-		}
-		if(button.id == 1)
-		{
+			break;
+		case 1:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.RANGER_NORTH)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_RANGER);
 				GuiOpener.closeScreen();
@@ -101,9 +102,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.RANGER_NORTH);
 			}
-		}
-		if(button.id == 2)
-		{
+			break;
+		case 2:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.BLUE_MOUNTAINS)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_BLUE_MOUNTAINS);
 				GuiOpener.closeScreen();
@@ -113,9 +113,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.BLUE_MOUNTAINS);
 			}
-		}
-		if(button.id == 3)
-		{
+			break;
+		case 3:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HIGH_ELF)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_LINDON);
 				GuiOpener.closeScreen();
@@ -125,9 +124,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HIGH_ELF);
 			}
-		}
-		if(button.id == 4)
-		{
+			break;
+		case 4:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GUNDABAD)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_GUNDABAD);
 				GuiOpener.closeScreen();
@@ -137,9 +135,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GUNDABAD);
 			}
-		}
-		if(button.id == 5)
-		{
+			break;
+		case 5:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.ANGMAR)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_ANGMAR);
 				GuiOpener.closeScreen();
@@ -149,9 +146,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.ANGMAR);
 			}
-		}
-		if(button.id == 6)
-		{
+			break;
+		case 6:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.WOOD_ELF)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_WOOD_ELF);
 				GuiOpener.closeScreen();
@@ -161,9 +157,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.WOOD_ELF);
 			}
-		}
-		if(button.id == 7)
-		{
+			break;
+		case 7:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DOL_GULDUR)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DOL_GULDUR);
 				GuiOpener.closeScreen();
@@ -173,9 +168,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DOL_GULDUR);
 			}
-		}
-		if(button.id == 8)
-		{
+			break;
+		case 8:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DALE)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DALISH);
 				GuiOpener.closeScreen();
@@ -185,9 +179,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DALE);
 			}
-		}
-		if(button.id == 9)
-		{
+			break;
+		case 9:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DWARF)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DWARVEN);
 				GuiOpener.closeScreen();
@@ -197,9 +190,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DWARF);
 			}
-		}
-		if(button.id == 10)
-		{
+			break;
+		case 10:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GALADHRIM)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_GALADHRIM);
 				GuiOpener.closeScreen();
@@ -209,9 +201,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GALADHRIM);
 			}
-		}
-		if(button.id == 11)
-		{
+			break;
+		case 11:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DUNLAND)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DUNLENDING);
 				GuiOpener.closeScreen();
@@ -221,9 +212,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DUNLAND);
 			}
-		}
-		if(button.id == 12)
-		{
+			break;
+		case 12:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.URUK_HAI)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_URUK);
 				GuiOpener.closeScreen();
@@ -233,9 +223,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.URUK_HAI);
 			}
-		}
-		if(button.id == 13)
-		{
+			break;
+		case 13:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.ROHAN)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_ROHIRRIC);
 				GuiOpener.closeScreen();
@@ -245,9 +234,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.ROHAN);
 			}
-		}
-		if(button.id == 14)
-		{
+			break;
+		case 14:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GONDOR)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_GONDORIAN);
 				GuiOpener.closeScreen();
@@ -257,9 +245,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GONDOR);
 			}
-		}
-		if(button.id == 15)
-		{
+			break;
+		case 15:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.GONDOR)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DOL_AMROTH);
 				GuiOpener.closeScreen();
@@ -269,9 +256,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.GONDOR);
 			}
-		}
-		if(button.id == 16)
-		{
+			break;
+		case 16:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.MORDOR)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_MORGUL);
 				GuiOpener.closeScreen();
@@ -281,9 +267,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.MORDOR);
 			}
-		}
-		if(button.id == 17)
-		{
+			break;
+		case 17:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.DORWINION)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_DORWINION);
 				GuiOpener.closeScreen();
@@ -293,9 +278,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.DORWINION);
 			}
-		}
-		if(button.id == 18)
-		{
+			break;
+		case 18:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.RHUN)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_RHUNIC);
 				GuiOpener.closeScreen();
@@ -305,9 +289,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.RHUN);
 			}
-		}
-		if(button.id == 19)
-		{
+			break;
+		case 19:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.NEAR_HARAD)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_HARADRIC);
 				GuiOpener.closeScreen();
@@ -317,9 +300,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.NEAR_HARAD);
 			}
-		}
-		if(button.id == 20)
-		{
+			break;
+		case 20:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.MOREDAIN)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_MOREDAIN);
 				GuiOpener.closeScreen();
@@ -329,9 +311,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.MOREDAIN);
 			}
-		}
-		if(button.id == 21)
-		{
+			break;
+		case 21:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.TAUREDAIN)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_TAUREDAIN);
 				GuiOpener.closeScreen();
@@ -341,9 +322,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.TAUREDAIN);
 			}
-		}
-		if(button.id == 22)
-		{
+			break;
+		case 22:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HALF_TROLL)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_HALF_TROLL);
 				GuiOpener.closeScreen();
@@ -353,9 +333,8 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HALF_TROLL);
 			}
-		}
-		if(button.id == 23)
-		{
+			break;
+		case 23:
 			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.HIGH_ELF)>0) {
 				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_RIVENDELL);
 				GuiOpener.closeScreen();
@@ -365,6 +344,32 @@ public class HandheldCrafterGuiContainer extends GuiContainer{
 				GuiOpener.closeScreen();
 				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.HIGH_ELF);
 			}
+			break;
+		case 24:
+			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.NEAR_HARAD)>0) {
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_UMBARIC);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.umbaric"));
+			}
+			else {
+				GuiOpener.closeScreen();
+				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.NEAR_HARAD);
+			}
+			break;
+		case 25:
+			if(LOTRLevelData.getData(GuiOpener).getAlignment(LOTRFaction.NEAR_HARAD)>0) {
+				GuiOpener.getCurrentEquippedItem().setItemDamage(ItemHandheldFactionCrafter.TAG_GULFEN);
+				GuiOpener.closeScreen();
+				GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction" + "chat.mett.gulfen"));
+			}
+			else {
+				GuiOpener.closeScreen();
+				LOTRAlignmentValues.notifyAlignmentNotHighEnough(GuiOpener, 1, LOTRFaction.NEAR_HARAD);
+			}
+			break;
+		default:
+			GuiOpener.closeScreen();
+			GuiOpener.addChatComponentMessage(new ChatComponentTranslation("chat.mett.setFaction.error"));
 		}
 	}
 }

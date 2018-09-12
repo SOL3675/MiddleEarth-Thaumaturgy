@@ -5,16 +5,18 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
-:compileApiJava UP-TO-DATE
-:processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
-:sourceMainJava
-:compileJava警告: [options] ブートストラップ・クラスパスが-source 1.6と一緒に設定されていません
-注意:一部の入力ファイルは非推奨のAPIを使用またはオーバーライドしています。
+:compileApiJava注意:一部の入力ファイルは非推奨のAPIを使用またはオーバーライドしています。
 注意:詳細は、-Xlint:deprecationオプションを指定して再コンパイルしてください。
 注意:入力ファイルの操作のうち、未チェックまたは安全ではないものがあります。
 注意:詳細は、-Xlint:uncheckedオプションを指定して再コンパイルしてください。
-警告1個
+
+:processApiResources UP-TO-DATE
+:apiClasses
+:sourceMainJava UP-TO-DATE
+:compileJava注意:一部の入力ファイルは非推奨のAPIを使用またはオーバーライドしています。
+注意:詳細は、-Xlint:deprecationオプションを指定して再コンパイルしてください。
+注意:入力ファイルの操作のうち、未チェックまたは安全ではないものがあります。
+注意:詳細は、-Xlint:uncheckedオプションを指定して再コンパイルしてください。
 
 :processResources
 :classes
@@ -34,4 +36,4 @@
 
 BUILD SUCCESSFUL
 
-Total time: 11.542 secs
+Total time: 11.245 secs

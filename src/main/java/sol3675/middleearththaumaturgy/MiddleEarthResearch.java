@@ -80,7 +80,8 @@ public class MiddleEarthResearch {
 		)
 		.setPages(new ResearchPage[]
 		{
-			new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_blackuruksteel"),
+			new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_blackuruksteel.1"),
+			new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_blackuruksteel.2")
 		})
 		.setSecondary()
 		.setParents(new String[] {"GULDURILBLACKURUK"}).registerResearchItem();
@@ -110,7 +111,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_bluedwarvensteel")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_bluedwarvensteel.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_bluedwarvensteel.2")
 			})
 		.setSecondary()
 		.setParents(new String[] {"ITHILDINBLUEDWARVEN"}).registerResearchItem();
@@ -139,7 +141,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_dwarvensteel")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_dwarvensteel.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_dwarvensteel.2")
 			})
 			.setSecondary()
 		.setParents(new String[] {"ITHILDINDWARVEN"}).registerResearchItem();
@@ -168,7 +171,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_elvensteel")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_elvensteel.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_elvensteel.2")
 			})
 			.setSecondary()
 		.setParents(new String[] {"EDHELMIRELVEN"}).registerResearchItem();
@@ -197,7 +201,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_galvorn")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_galvorn.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_galvorn.2")
 			})
 			.setSecondary()
 		.setParents(new String[] {"DAEDELOSGALVORN"}).registerResearchItem();
@@ -254,7 +259,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_morgulsteel")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_morgulsteel.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_morgulsteel.2")
 			})
 			.setSecondary()
 		.setParents(new String[] {"DAEDELOSMORGUL"}).registerResearchItem();
@@ -283,7 +289,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_orcsteel")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_orcsteel.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_orcsteel.2")
 			})
 			.setSecondary()
 		.setParents(new String[] {"DURNAURORC"}).registerResearchItem();
@@ -312,7 +319,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_uruksteel")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_uruksteel.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_uruksteel.2")
 			})
 			.setSecondary()
 		.setParents(new String[] {"GULDURILURUK"}).registerResearchItem();
@@ -341,7 +349,8 @@ public class MiddleEarthResearch {
 			)
 			.setPages(new ResearchPage[]
 			{
-				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_gildediron")
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_gildediron.1"),
+				new ResearchPage(LibMisc.MODFULLID + ".research_page." + "CAP_gildediron.2")
 			})
 			.setSecondary()
 		.setParents(new String[] {"BRIGHTENGILDEDIRON"}).registerResearchItem();
@@ -428,10 +437,48 @@ public class MiddleEarthResearch {
 				)
 		.setPages(new ResearchPage[] {
 				new ResearchPage("middleearththaumaturgy.research_page.GEMTRANSMETT.1"),
-				new ResearchPage((CrucibleRecipe) recipes.get("GemTransTopaz"))
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransTopaz")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransAmethyst")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransSapphire")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransRuby")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransAmber")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransDiamond")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransPearl")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransCoral")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransOpal")),
+				new ResearchPage((CrucibleRecipe) recipes.get("GemTransEmerald"))
 				}
 		).setSecondary()
 		.setParents(new String[] {"ALCHEMICALDUPLICATION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"EDHELMIRTRANS",
+				"FREEPEOPLE",
+				(new AspectList()).add(Aspect.CRYSTAL, 4).add(MiddleEarthAspects.ELVES, 2).add(Aspect.LIGHT, 2),
+				-7,-4, 2,
+				new ItemStack(LOTRMod.quenditeCrystal))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.EDHELMIRTRANS.1"),
+				new ResearchPage((CrucibleRecipe) recipes.get("EdhelmirTrans"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ALCHEMICALDUPLICATION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"GULDURILTRANS",
+				"SAURON",
+				(new AspectList()).add(Aspect.CRYSTAL, 4).add(MiddleEarthAspects.ORCS, 2).add(MiddleEarthAspects.NAZGULS, 2),
+				-7,-4, 2,
+				new ItemStack(LOTRMod.guldurilCrystal))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.GULDURILTRANS.1"),
+				new ResearchPage((CrucibleRecipe) recipes.get("GuldurilTrans"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ALCHEMICALDUPLICATION"}).registerResearchItem();
+		
 	}
 
 	private static void addFreePeople() {

@@ -47,6 +47,8 @@ public class ItemHandheldFactionCrafter extends Item{
 	public static final int TAG_TAUREDAIN = 39;
 	public static final int TAG_HALF_TROLL = 34;
 	public static final int TAG_RIVENDELL = 51;
+	public static final int TAG_UMBARIC = 56;
+	public static final int TAG_GULFEN = 57;
 	
 	
 	public ItemHandheldFactionCrafter() {

@@ -4,7 +4,9 @@ import java.util.List;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
+import lotr.common.LOTRMod;
 import lotr.common.recipe.LOTRRecipes;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -14,6 +16,7 @@ import sol3675.middleearththaumaturgy.common.blocks.BlockStorage;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
 import sol3675.middleearththaumaturgy.common.items.ItemMaterialNugget;
 import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
+import sol3675.middleearththaumaturgy.config.MeetCfg;
 import sol3675.middleearththaumaturgy.helper.LotrItems;
 import sol3675.middleearththaumaturgy.helper.RecipeHelper;
 
@@ -39,12 +42,15 @@ public class GeneralRecipes {
 		
 		registerOres();
 		
-		if(Loader.isModLoaded("lotr") == true) {
-			addGeneralLotrRecipes();
-			addLotrRecipes();
-		}
+		addGeneralLotrRecipes();
+		addLotrRecipes();
 		
 		addStorageRecipes();
+		
+		if(MeetCfg.easyFactionCrafter == true)
+		{
+			addEasyFactionCrafter();
+		}
 		
 	}
 	
@@ -183,6 +189,11 @@ public class GeneralRecipes {
 			)
 		);
 		
+	}
+	
+	private static void addEasyFactionCrafter()
+	{
+		GameRegistry.addRecipe(new ItemStack(MiddleEarthThaumaturgyItems.factionCrafter, 1, 0), new Object[] {"SSS", "SXS", "SSS", 'S', Blocks.crafting_table, 'X', LOTRMod.goldRing});
 	}
 	
 	private static void addRecipeTo(List[] rList, IRecipe recipe)

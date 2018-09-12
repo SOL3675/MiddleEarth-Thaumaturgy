@@ -103,12 +103,7 @@ public class LotrAspectRegister {
 	public static void setAspectLotr() {
 
 		addAspectMisc();
-
-		if(Loader.isModLoaded("lotr") == true) {
-
-			addAspectLotr();
-
-		}
+		addAspectLotr();
 
 	}
 

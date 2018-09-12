@@ -224,7 +224,8 @@ public class Recipes {
 								new ItemStack(LOTRMod.angmarTable), new ItemStack(LOTRMod.woodElvenTable), new ItemStack(LOTRMod.dolGuldurTable), new ItemStack(LOTRMod.daleTable), new ItemStack(LOTRMod.dwarvenTable),
 								new ItemStack(LOTRMod.elvenTable), new ItemStack(LOTRMod.dunlendingTable), new ItemStack(LOTRMod.urukTable), new ItemStack(LOTRMod.rohirricTable), new ItemStack(LOTRMod.gondorianTable),
 								new ItemStack(LOTRMod.dolAmrothTable), new ItemStack(LOTRMod.morgulTable), new ItemStack(LOTRMod.dorwinionTable), new ItemStack(LOTRMod.rhunTable), new ItemStack(LOTRMod.nearHaradTable),
-								new ItemStack(LOTRMod.moredainTable), new ItemStack(LOTRMod.tauredainTable), new ItemStack(LOTRMod.halfTrollTable), new ItemStack(LOTRMod.rivendellTable)
+								new ItemStack(LOTRMod.moredainTable), new ItemStack(LOTRMod.tauredainTable), new ItemStack(LOTRMod.halfTrollTable), new ItemStack(LOTRMod.rivendellTable), new ItemStack(LOTRMod.umbarTable),
+								new ItemStack(LOTRMod.gulfTable)
 								}
 						)
 				)
@@ -527,52 +528,62 @@ public class Recipes {
 	{
 		MiddleEarthResearch.recipes.put("GemTransTopaz",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-            new ItemStack(LOTRMod.topaz), new ItemStack(LOTRMod.topaz), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.FIRE, 10))
+            new ItemStack(LOTRMod.topaz, 2, 0), new ItemStack(LOTRMod.topaz), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.FIRE, 10))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransAmethyst",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-	        new ItemStack(LOTRMod.amethyst), new ItemStack(LOTRMod.amethyst), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.AURA, 10))
+	        new ItemStack(LOTRMod.amethyst, 2, 0), new ItemStack(LOTRMod.amethyst), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.AURA, 10))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransSapphire",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-	        new ItemStack(LOTRMod.sapphire), new ItemStack(LOTRMod.sapphire), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.HEAL, 10))
+	        new ItemStack(LOTRMod.sapphire, 2, 0), new ItemStack(LOTRMod.sapphire), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.HEAL, 10))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransRuby",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-			new ItemStack(LOTRMod.ruby), new ItemStack(LOTRMod.ruby), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.ENERGY, 10))
+			new ItemStack(LOTRMod.ruby, 2, 0), new ItemStack(LOTRMod.ruby), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.ENERGY, 10))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransAmber",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-			new ItemStack(LOTRMod.amber), new ItemStack(LOTRMod.amber), (new AspectList()).merge(Aspect.CRYSTAL, 5).merge(Aspect.TRAP, 5))
+			new ItemStack(LOTRMod.amber, 2, 0), new ItemStack(LOTRMod.amber), (new AspectList()).merge(Aspect.CRYSTAL, 5).merge(Aspect.TRAP, 5))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransDiamond",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-			new ItemStack(LOTRMod.diamond), new ItemStack(LOTRMod.diamond), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.GREED, 10))
+			new ItemStack(LOTRMod.diamond, 2, 0), new ItemStack(LOTRMod.diamond), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.GREED, 10))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransPearl",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-			new ItemStack(LOTRMod.pearl), new ItemStack(LOTRMod.pearl), (new AspectList()).merge(Aspect.CRYSTAL, 5).merge(Aspect.EXCHANGE, 5))
+			new ItemStack(LOTRMod.pearl, 2, 0), new ItemStack(LOTRMod.pearl), (new AspectList()).merge(Aspect.CRYSTAL, 5).merge(Aspect.EXCHANGE, 5))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransCoral",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-			new ItemStack(LOTRMod.coral), new ItemStack(LOTRMod.coral), (new AspectList()).merge(Aspect.CRYSTAL, 5).merge(Aspect.WATER, 5))
+			new ItemStack(LOTRMod.coral, 2, 0), new ItemStack(LOTRMod.coral), (new AspectList()).merge(Aspect.CRYSTAL, 5).merge(Aspect.WATER, 5))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransOpal",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-			new ItemStack(LOTRMod.opal), new ItemStack(LOTRMod.opal), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(MiddleEarthAspects.IMMORTAL, 10))
+			new ItemStack(LOTRMod.opal, 2, 0), new ItemStack(LOTRMod.opal), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(MiddleEarthAspects.IMMORTAL, 10))
 		);
 		
 		MiddleEarthResearch.recipes.put("GemTransEmerald",
 			ThaumcraftApi.addCrucibleRecipe("GEMTRANSMETT",
-			new ItemStack(LOTRMod.emerald), new ItemStack(LOTRMod.emerald), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.GREED, 10))
+			new ItemStack(LOTRMod.emerald, 2, 0), new ItemStack(LOTRMod.emerald), (new AspectList()).merge(Aspect.CRYSTAL, 10).merge(Aspect.GREED, 10))
+		);
+		
+		MiddleEarthResearch.recipes.put("EdhelmirTrans",
+			ThaumcraftApi.addCrucibleRecipe("EDHELMIRTRANS",
+			new ItemStack(LOTRMod.quenditeCrystal, 2, 0), new ItemStack(LOTRMod.quenditeCrystal), (new AspectList()).merge(Aspect.CRYSTAL, 8).merge(MiddleEarthAspects.ELVES, 6))
+		);
+		
+		MiddleEarthResearch.recipes.put("GuldurilTrans",
+			ThaumcraftApi.addCrucibleRecipe("GULDURILTRANS",
+			new ItemStack(LOTRMod.guldurilCrystal, 2, 0), new ItemStack(LOTRMod.guldurilCrystal), (new AspectList()).merge(MiddleEarthAspects.ORCS, 2).merge(MiddleEarthAspects.NAZGULS, 2))
 		);
 	}
 

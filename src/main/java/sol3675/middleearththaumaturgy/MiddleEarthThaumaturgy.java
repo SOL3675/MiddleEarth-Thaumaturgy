@@ -3,6 +3,8 @@ package sol3675.middleearththaumaturgy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.Metadata;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -15,6 +17,9 @@ import sol3675.middleearththaumaturgy.references.LibMisc;
 
 public class MiddleEarthThaumaturgy {
 	
+	@Metadata(LibMisc.MODID)
+	public static ModMetadata meta;
+	
 	public static final CreativeTabs tabMiddleEarthThaumaturgy = new CreativeTabMiddleEarthThaumaturgy("MiddleEarthThaumaturgy");
 	
 	@SidedProxy(clientSide="sol3675.middleearththaumaturgy.proxy.ClientProxy", serverSide="sol3675.middleearththaumaturgy.proxy.ServerProxy")
@@ -26,6 +31,7 @@ public class MiddleEarthThaumaturgy {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		ModInfo.loadInfo(meta);
 		proxy.preInit(event);
 		
 	}

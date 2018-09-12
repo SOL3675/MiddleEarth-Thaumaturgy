@@ -42,101 +42,59 @@ public class FactionWandUpdate implements IWandRodOnUpdate{
 		
 	}
 	
-	public static LOTRFaction faction(ItemStack itemstack)
+	private static LOTRFaction faction(ItemStack itemstack)
 	{
 		String factionname = ((ItemWandCasting)itemstack.getItem()).getRod(itemstack).getTag();
-		if(factionname == "GONDOR")
+		switch(factionname)
 		{
+		case "GONDOR":
 			return LOTRFaction.GONDOR;
-		}
-		if(factionname == "HOBBIT")
-		{
+		case "HOBBIT":
 			return LOTRFaction.HOBBIT;
-		}
-		if(factionname == "RANGER_NORTH")
-		{
+		case "RANGER_NORTH":
 			return LOTRFaction.RANGER_NORTH;
-		}
-		if(factionname == "BLUE_MOUNTAINS")
-		{
+		case "BLUE_MOUNTAINS":
 			return LOTRFaction.BLUE_MOUNTAINS;
-		}
-		if(factionname == "HIGH_ELF")
-		{
+		case "HIGH_ELF":
 			return LOTRFaction.HIGH_ELF;
-		}
-		if(factionname == "GUNDABAD")
-		{
+		case "GUNDABAD":
 			return LOTRFaction.GUNDABAD;
-		}
-		if(factionname == "ANGMAR")
-		{
+		case "ANGMAR":
 			return LOTRFaction.ANGMAR;
-		}
-		if(factionname == "WOOD_ELF")
-		{
+		case "WOOD_ELF":
 			return LOTRFaction.WOOD_ELF;
-		}
-		if(factionname == "DOL_GULDUR")
-		{
+		case "DOL_GULDUR":
 			return LOTRFaction.DOL_GULDUR;
-		}
-		if(factionname == "DALE")
-		{
+		case "DALE":
 			return LOTRFaction.DALE;
-		}
-		if(factionname == "DWARF")
-		{
+		case "DWARF":
 			return LOTRFaction.DWARF;
-		}
-		if(factionname == "GALADHRIM")
-		{
+		case "GALADHRIM":
 			return LOTRFaction.GALADHRIM;
-		}
-		if(factionname == "DUNLAND")
-		{
+		case "DUNLAND":
 			return LOTRFaction.DUNLAND;
-		}
-		if(factionname == "URUK_HAI")
-		{
+		case "URUK_HAI":
 			return LOTRFaction.URUK_HAI;
-		}
-		if(factionname == "FANGORN")
-		{
+		case "FANGORN":
 			return LOTRFaction.FANGORN;
-		}
-		if(factionname == "ROHAN")
-		{
+		case "ROHAN":
 			return LOTRFaction.ROHAN;
-		}
-		if(factionname == "MORDOR")
-		{
+		case "MORDOR":
 			return LOTRFaction.MORDOR;
-		}
-		if(factionname == "DORWINION")
-		{
+		case "DORWINION":
 			return LOTRFaction.DORWINION;
-		}
-		if(factionname == "RHUN")
-		{
+		case "RHUN":
 			return LOTRFaction.RHUN;
-		}
-		if(factionname == "NEAR_HARAD")
-		{
+		case "NEAR_HARAD":
 			return LOTRFaction.NEAR_HARAD;
-		}
-		if(factionname == "MOREDAIN")
-		{
+		case "MOREDAIN":
 			return LOTRFaction.MOREDAIN;
-		}
-		if(factionname == "TAUREDAIN")
-		{
+		case "TAUREDAIN":
 			return LOTRFaction.TAUREDAIN;
-		}
-		if(factionname == "HALF_TROLL")
-		{
+		case "HALF_TROLL":
 			return LOTRFaction.HALF_TROLL;
+		default:
+			return LOTRFaction.UTUMNO;
 		}
-		return LOTRFaction.UTUMNO;
 	}
 }

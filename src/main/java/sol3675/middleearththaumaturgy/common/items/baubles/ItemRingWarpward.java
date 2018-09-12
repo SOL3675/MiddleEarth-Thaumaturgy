@@ -9,6 +9,7 @@ import sol3675.middleearththaumaturgy.config.MeetCfg;
 import sol3675.middleearththaumaturgy.references.LibMisc;
 import thaumcraft.api.IVisDiscountGear;
 import thaumcraft.api.aspects.Aspect;
+import thaumcraft.common.config.Config;
 
 public class ItemRingWarpward extends ItemRing implements IVisDiscountGear{
 	
@@ -21,13 +22,13 @@ public class ItemRingWarpward extends ItemRing implements IVisDiscountGear{
 	@Override
 	public void onWornTick(ItemStack itemstack, EntityLivingBase entity)
 	{
-		entity.addPotionEffect(new PotionEffect(MeetCfg.tcWarpWardPotionID, 200, 0));
+		entity.addPotionEffect(new PotionEffect(Config.potionWarpWardID, 200, 0));
 	}
 	
 	@Override
 	public void onUnequipped(ItemStack itemstack, EntityLivingBase player)
 	{
-		player.removePotionEffect(MeetCfg.tcWarpWardPotionID);
+		player.removePotionEffect(Config.potionWarpWardID);
 	}
 
 	@Override

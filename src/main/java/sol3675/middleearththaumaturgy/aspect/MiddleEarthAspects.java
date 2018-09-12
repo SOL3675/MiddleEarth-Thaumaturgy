@@ -82,8 +82,8 @@ public class MiddleEarthAspects {
 		DORWINION = new Aspect("dorwinion", 0x751d63, new Aspect[] { MEN, ELVES }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/dorwinion.png"),1);
 		RHUDEL = new Aspect("rhudel", 0xceab5f, new Aspect[] { MEN, Aspect.HUNGER }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/rhudel.png"),1);
 		NEARHARAD = new Aspect("harad", 0xed310b, new Aspect[] { MEN, Aspect.FIRE }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/harad.png"),1);
-		MOREDAIN = new Aspect("moredain", 0xe0b869, new Aspect[] { MEN, Aspect.POISON }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/moredain.png"),1);
-		TAUREDAIN = new Aspect("tauredain", 0x1d6038, new Aspect[] { MEN, Aspect.TREE }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/tauredain.png"),1);
+		MOREDAIN = new Aspect("morwaith", 0xe0b869, new Aspect[] { MEN, Aspect.POISON }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/moredain.png"),1);
+		TAUREDAIN = new Aspect("taurethrim", 0x1d6038, new Aspect[] { MEN, Aspect.TREE }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/tauredain.png"),1);
 		HALFTROLLS = new Aspect("pertorog", 0x8c7f5b, new Aspect[] { MEN, TROLLS }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/pertorog.png"),1);
 		UTUMNO = new Aspect("utumno", 0x2d0404, new Aspect[] { BALROGS, Aspect.ELDRITCH }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/utumno.png"),1);
 		
