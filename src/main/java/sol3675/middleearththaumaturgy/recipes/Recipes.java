@@ -220,12 +220,7 @@ public class Recipes {
 						new ItemStack(Blocks.crafting_table),
 						new ItemStack[]
 								{
-								new ItemStack(LOTRMod.hobbitTable), new ItemStack(LOTRMod.rangerTable), new ItemStack(LOTRMod.blueDwarvenTable), new ItemStack(LOTRMod.highElvenTable), new ItemStack(LOTRMod.gundabadTable),
-								new ItemStack(LOTRMod.angmarTable), new ItemStack(LOTRMod.woodElvenTable), new ItemStack(LOTRMod.dolGuldurTable), new ItemStack(LOTRMod.daleTable), new ItemStack(LOTRMod.dwarvenTable),
-								new ItemStack(LOTRMod.elvenTable), new ItemStack(LOTRMod.dunlendingTable), new ItemStack(LOTRMod.urukTable), new ItemStack(LOTRMod.rohirricTable), new ItemStack(LOTRMod.gondorianTable),
-								new ItemStack(LOTRMod.dolAmrothTable), new ItemStack(LOTRMod.morgulTable), new ItemStack(LOTRMod.dorwinionTable), new ItemStack(LOTRMod.rhunTable), new ItemStack(LOTRMod.nearHaradTable),
-								new ItemStack(LOTRMod.moredainTable), new ItemStack(LOTRMod.tauredainTable), new ItemStack(LOTRMod.halfTrollTable), new ItemStack(LOTRMod.rivendellTable), new ItemStack(LOTRMod.umbarTable),
-								new ItemStack(LOTRMod.gulfTable)
+								new ItemStack(ConfigItems.itemFocusPouch), new ItemStack(Items.sign), new ItemStack(LOTRMod.goldRing)
 								}
 						)
 				)

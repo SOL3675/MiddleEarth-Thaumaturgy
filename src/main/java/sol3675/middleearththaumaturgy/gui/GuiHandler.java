@@ -13,7 +13,7 @@ public class GuiHandler implements IGuiHandler{
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if(ID == GuiIDs.HANDHELDCRAFTING)
 		{
-			return new MeetContainer(x, y, z);
+			return new HandheldCrafterContainer(player.inventory);
 		}
 		return null;
 	}
@@ -22,7 +22,7 @@ public class GuiHandler implements IGuiHandler{
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if(ID == GuiIDs.HANDHELDCRAFTING)
 		{
-			return new HandheldCrafterGuiContainer(player, world, x, y, z);
+			return new HandheldCrafterGuiContainer(player.inventory);
 		}
 		return null;
 	}

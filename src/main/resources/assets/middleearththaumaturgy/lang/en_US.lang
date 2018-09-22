@@ -323,7 +323,7 @@ middleearththaumaturgy.research_textRING_warpward=While long journey, you should
 middleearththaumaturgy.research_page.RING_warpward.1=Infusing high power of the white wizard, finally you can completely prevents your warps!
 middleearththaumaturgy.research_name.HANDHELDCRAFTER=Handheld Factions Crafter
 middleearththaumaturgy.research_textHANDHELDCRAFTER=All in one!
-middleearththaumaturgy.research_page.HANDHELDCRAFTER.1=You can choose the factions when use this while sneaking.
+middleearththaumaturgy.research_page.HANDHELDCRAFTER.1=Use while sneaking, you can access the inventory of this item.<BR>You can use the table in the first slot of this inventory.
 middleearththaumaturgy.research_name.BOOKSHELFINVENTARIUM=Star Infused Bookshelf Mithril
 middleearththaumaturgy.research_textBOOKSHELFINVENTARIUM=Unlimited Potential!
 middleearththaumaturgy.research_page.BOOKSHELFINVENTARIUM.1=This Bookshelf provides 1,048,576 slots to Inventarium.
@@ -337,30 +337,8 @@ middleearththaumaturgy.research_name.GULDURILTRANS=Gulduril Transmutation
 middleearththaumaturgy.research_textGULDURILTRANS=the Dreadful Morgul gem!
 middleearththaumaturgy.research_page.GULDURILTRANS.1=Duplicating Gulduril with crucible!<BR>The Epic Way!
 #
+#GUI
+container.crafter=Handheld Faction Crafter
+#
 #chat message
-chat.mett.setFactionchat.mett.hobbit=Crafter set faction Hobbit
-chat.mett.setFactionchat.mett.ranger=Crafter set faction Ranger
-chat.mett.setFactionchat.mett.blue_mountains=Crafter set faction Blue Mountains
-chat.mett.setFactionchat.mett.lindon=Crafter set faction Lindon
-chat.mett.setFactionchat.mett.gundabad=Crafter set faction Gundabad
-chat.mett.setFactionchat.mett.angmar=Crafter set faction Angmar
-chat.mett.setFactionchat.mett.wood_elf=Crafter set faction Wood Elven
-chat.mett.setFactionchat.mett.dol_guldur=Crafter set faction Dol Guldur
-chat.mett.setFactionchat.mett.dalish=Crafter set faction Dalish
-chat.mett.setFactionchat.mett.dwarven=Crafter set faction Dwarven
-chat.mett.setFactionchat.mett.galadhrim=Crafter set faction Hobbit
-chat.mett.setFactionchat.mett.dunlending=Crafter set faction Dunlending
-chat.mett.setFactionchat.mett.uruk=Crafter set faction Uruk
-chat.mett.setFactionchat.mett.rohirric=Crafter set faction Rohirric
-chat.mett.setFactionchat.mett.gondorian=Crafter set faction Gondorian
-chat.mett.setFactionchat.mett.dol_amroth=Crafter set faction Dol Amroth
-chat.mett.setFactionchat.mett.morgul=Crafter set faction Morgul
-chat.mett.setFactionchat.mett.dorwinion=Crafter set faction Dorwinion
-chat.mett.setFactionchat.mett.rhunic=Crafter set faction Rhûnic
-chat.mett.setFactionchat.mett.haradric=Crafter set faction Haradric
-chat.mett.setFactionchat.mett.moredain=Crafter set faction Morwaith
-chat.mett.setFactionchat.mett.tauredain=Crafter set faction Taurethrim
-chat.mett.setFactionchat.mett.half_troll=Crafter set faction Half Troll
-chat.mett.setFactionchat.mett.rivendell=Crafter set faction Rivendell
-chat.mett.setFactionchat.mett.umbaric=Crafter set faction Umbaric
-chat.mett.setFactionchat.mett.gulfen=Crafter set faction Gulfen
+mett.chat.nocrafter=No Crafting Table Avilable!

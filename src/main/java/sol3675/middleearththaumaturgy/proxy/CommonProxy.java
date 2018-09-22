@@ -17,6 +17,7 @@ import sol3675.middleearththaumaturgy.common.items.tgstuff.ItemTitle;
 import sol3675.middleearththaumaturgy.common.tileentities.MiddleEarthThaumaturgyTileentities;
 import sol3675.middleearththaumaturgy.config.MeetCfg;
 import sol3675.middleearththaumaturgy.gui.GuiHandler;
+import sol3675.middleearththaumaturgy.network.PacketHandler;
 import sol3675.middleearththaumaturgy.recipes.GeneralRecipes;
 import sol3675.middleearththaumaturgy.recipes.Recipes;
 
@@ -35,7 +36,7 @@ public class CommonProxy{
 		}
 		MiddleEarthThaumaturgyBlocks.addBlocks();
 		MiddleEarthThaumaturgyTileentities.addTileentities();
-		
+		PacketHandler.init();
 	}
 	
 	public void init(FMLInitializationEvent event) {
