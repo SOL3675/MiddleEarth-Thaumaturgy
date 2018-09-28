@@ -1,9 +1,13 @@
 package sol3675.middleearththaumaturgy.inventory;
 
 import lotr.common.LOTRMod;
+import lotr.common.block.LOTRBlockCraftingTable;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -167,6 +171,17 @@ public class InventoryItem implements IInventory{
 	public boolean isItemValidForSlot(int slotIndex, ItemStack itemstack) {
 		if(itemstack != null)
 		{
+			
+			Item item = itemstack.getItem();
+			if(item instanceof ItemBlock)
+			{
+				Block block = ((ItemBlock)item).field_150939_a;
+				if(block instanceof LOTRBlockCraftingTable)
+				{
+					return true;
+				}
+			}
+			/*
 			if(itemstack.isItemEqual(new ItemStack(LOTRMod.hobbitTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.rangerTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.blueDwarvenTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.highElvenTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.gundabadTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.angmarTable)) ||
 					itemstack.isItemEqual(new ItemStack(LOTRMod.woodElvenTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.dolGuldurTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.daleTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.dwarvenTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.elvenTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.dunlendingTable)) ||
 					itemstack.isItemEqual(new ItemStack(LOTRMod.urukTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.rohirricTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.gondorianTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.dolAmrothTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.morgulTable)) || itemstack.isItemEqual(new ItemStack(LOTRMod.dorwinionTable)) ||
@@ -175,6 +190,7 @@ public class InventoryItem implements IInventory{
 			{
 				return true;
 			}
+			*/
 		}
 		return false;
 	}

@@ -205,7 +205,7 @@ public class Recipes {
 						new ItemStack(MiddleEarthThaumaturgyItems.ringWarpward, 1, 0),
 						8,
 						(new AspectList().add(Aspect.AURA, 64).add(Aspect.TAINT, 64).add(MiddleEarthAspects.WIZARDS, 64).add(MiddleEarthAspects.IMMORTAL, 64)),
-						new ItemStack(LotrItems.get("item.goldRing"), 1, 4),
+						new ItemStack(LotrItems.get("item.goldRing")),
 						new ItemStack[] {new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5), new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5), new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5)}
 						)
 				)
