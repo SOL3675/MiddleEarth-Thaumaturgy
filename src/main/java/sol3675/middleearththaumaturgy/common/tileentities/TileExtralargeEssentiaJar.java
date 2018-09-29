@@ -22,10 +22,7 @@ public class TileExtralargeEssentiaJar extends TileJarFillable implements IAspec
 	@Override
 	public int getSuctionAmount(ForgeDirection loc) {
 		if (this.amount < this.maxAmount){
-			if (this.aspectFilter != null) {
-				return 64;
-			}
-			return 56;
+			return this.aspectFilter != null ? 64 : 56;
 		}
 		return 0;
 	}
