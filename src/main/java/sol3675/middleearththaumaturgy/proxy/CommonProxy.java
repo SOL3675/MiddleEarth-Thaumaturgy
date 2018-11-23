@@ -20,6 +20,7 @@ import sol3675.middleearththaumaturgy.gui.GuiHandler;
 import sol3675.middleearththaumaturgy.network.PacketHandler;
 import sol3675.middleearththaumaturgy.recipes.GeneralRecipes;
 import sol3675.middleearththaumaturgy.recipes.Recipes;
+import sol3675.middleearththaumaturgy.register.TTCompatRegister;
 
 public class CommonProxy{
 	
@@ -31,8 +32,12 @@ public class CommonProxy{
 		MeetCfg.configurate(event.getSuggestedConfigurationFile());
 		MiddleEarthAspects.initAspects();
 		MiddleEarthThaumaturgyItems.addItems();
-		if(Loader.isModLoaded("TravellersGear") == true) {
+		if(Loader.isModLoaded("TravellersGear")) {
 			ItemTitle.addTitleItems();
+		}
+		if(Loader.isModLoaded("ThaumicTinkerer"))
+		{
+			TTCompatRegister.TTpreInit();
 		}
 		MiddleEarthThaumaturgyBlocks.addBlocks();
 		MiddleEarthThaumaturgyTileentities.addTileentities();

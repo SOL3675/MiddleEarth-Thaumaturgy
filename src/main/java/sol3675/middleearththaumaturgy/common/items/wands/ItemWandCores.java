@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import sol3675.middleearththaumaturgy.MiddleEarthThaumaturgy;
+import sol3675.middleearththaumaturgy.references.WandType;
 import thaumcraft.api.wands.WandCap;
 import thaumcraft.api.wands.WandRod;
 import thaumcraft.common.config.ConfigItems;
@@ -17,32 +18,6 @@ import thaumcraft.common.items.wands.ItemWandCasting;
 
 
 public class ItemWandCores extends Item{
-	
-	public final String[] types = {
-		"GONDOR",
-		"HOBBIT",
-		"RANGER_NORTH",
-		"BLUE_MOUNTAINS",
-		"HIGH_ELF",
-		"GUNDABAD",
-		"ANGMAR",
-		"WOOD_ELF",
-		"DOL_GULDUR",
-		"DALE",
-		"DWARF",
-		"GALADHRIM",
-		"DUNLAND",
-		"URUK_HAI",
-		"FANGORN",
-		"ROHAN",
-		"MORDOR",
-		"DORWINION",
-		"RHUN",
-		"NEAR_HARAD",
-		"MOREDAIN",
-		"TAUREDAIN",
-		"HALF_TROLL"
-	};
 	
 	public IIcon[] icon;
 	
@@ -56,9 +31,9 @@ public class ItemWandCores extends Item{
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerIcons(IIconRegister ir) {
-		icon = new IIcon[types.length];
-		for (int i = 0; i<types.length; ++i) {
-			this.icon[i] = ir.registerIcon("middleearththaumaturgy:wand_rod_" + types[i]);
+		icon = new IIcon[WandType.types.length];
+		for (int i = 0; i<WandType.types.length; ++i) {
+			this.icon[i] = ir.registerIcon("middleearththaumaturgy:wand_rod_" + WandType.types[i]);
 		}
 	}
 	
@@ -71,7 +46,7 @@ public class ItemWandCores extends Item{
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void getSubItems(Item item, CreativeTabs tab, List list) {
-		for (int i = 0; i < types.length; ++i) {
+		for (int i = 0; i < WandType.types.length; ++i) {
 			list.add(new ItemStack(this, 1, i));
 		}
 		
@@ -84,7 +59,7 @@ public class ItemWandCores extends Item{
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		return super.getUnlocalizedName() + "." + types[stack.getItemDamage()];
+		return super.getUnlocalizedName() + "." + WandType.types[stack.getItemDamage()];
 	}
 	
 
