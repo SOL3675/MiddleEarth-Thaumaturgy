@@ -5,9 +5,13 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
-:compileApiJava UP-TO-DATE
+:compileApiJava注意:一部の入力ファイルは非推奨のAPIを使用またはオーバーライドしています。
+注意:詳細は、-Xlint:deprecationオプションを指定して再コンパイルしてください。
+注意:入力ファイルの操作のうち、未チェックまたは安全ではないものがあります。
+注意:詳細は、-Xlint:uncheckedオプションを指定して再コンパイルしてください。
+
 :processApiResources UP-TO-DATE
-:apiClasses UP-TO-DATE
+:apiClasses
 :sourceMainJava
 :compileJava注意:一部の入力ファイルは非推奨のAPIを使用またはオーバーライドしています。
 注意:詳細は、-Xlint:deprecationオプションを指定して再コンパイルしてください。
@@ -32,4 +36,4 @@
 
 BUILD SUCCESSFUL
 
-Total time: 1 mins 2.01 secs
+Total time: 1 mins 3.27 secs
