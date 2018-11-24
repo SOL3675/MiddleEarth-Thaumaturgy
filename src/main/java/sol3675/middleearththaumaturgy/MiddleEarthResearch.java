@@ -556,7 +556,7 @@ public class MiddleEarthResearch {
 				"FREEPEOPLE",
 				(new AspectList()).add(MiddleEarthAspects.DUNEDAIN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
 				1, -5, 2,
-				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 2))
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 2))
 				)
 		.setPages(new ResearchPage[] {
 				new ResearchPage("middleearththaumaturgy.research_page.STAFF_RANGER_NORTH.1"),
@@ -971,7 +971,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((IArcaneRecipe) recipes.get("StaffURUK_HAI"))
 				}
 		).setSecondary()
-		.setParents(new String[] {"ROD_GUNDABAD"}).setConcealed().registerResearchItem();
+		.setParents(new String[] {"ROD_URUK_HAI"}).setConcealed().registerResearchItem();
 
 		(new MiddleEarthResearchItem(
 				"ROD_MORDOR",
@@ -1057,7 +1057,7 @@ public class MiddleEarthResearch {
 				"STAFF_MOREDAIN",
 				"SAURON",
 				(new AspectList()).add(MiddleEarthAspects.MOREDAIN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
-				-3, -3, 2,
+				-3, 1, 2,
 				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 20))
 				)
 		.setPages(new ResearchPage[] {

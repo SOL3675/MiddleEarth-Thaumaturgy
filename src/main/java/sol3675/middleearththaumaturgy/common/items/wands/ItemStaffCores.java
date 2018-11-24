@@ -16,10 +16,18 @@ import thaumcraft.api.wands.WandRod;
 import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.items.wands.ItemWandCasting;
 
-public class ItemStaffCores extends ItemWandCores
+public class ItemStaffCores extends Item
 {
 	
 	public IIcon[] icon;
+	
+	public ItemStaffCores()
+	{
+		this.setMaxStackSize(64);
+		this.setHasSubtypes(true);
+		this.setMaxDamage(0);
+		this.setCreativeTab(MiddleEarthThaumaturgy.tabMiddleEarthThaumaturgy);
+	}
 	
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -32,10 +40,21 @@ public class ItemStaffCores extends ItemWandCores
 	
 	@SideOnly(Side.CLIENT)
 	@Override
+	public IIcon getIconFromDamage(int meta) {
+		return this.icon[meta];
+	}
+	
+	@SideOnly(Side.CLIENT)
+	@Override
 	public void getSubItems(Item item, CreativeTabs tab, List list) {
 		for (int i = 0; i < WandType.types.length; ++i) {
 			list.add(new ItemStack(this, 1, i));
 		}
+	}
+	
+	@Override
+	public String getUnlocalizedName(ItemStack stack) {
+		return super.getUnlocalizedName() + "." + WandType.types[stack.getItemDamage()];
 	}
 
 }
