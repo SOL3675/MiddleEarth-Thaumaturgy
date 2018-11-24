@@ -10,6 +10,7 @@ import sol3675.middleearththaumaturgy.MiddleEarthResearchItem;
 import sol3675.middleearththaumaturgy.aspect.MiddleEarthAspects;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
 import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
+import sol3675.middleearththaumaturgy.config.MeetCfg;
 import sol3675.middleearththaumaturgy.references.LibMisc;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
@@ -21,7 +22,7 @@ import thaumcraft.api.research.ResearchPage;
 
 public class MiddleEarthResearch {
 
-	
+
 	public static HashMap recipes = new HashMap();
 
 
@@ -30,14 +31,14 @@ public class MiddleEarthResearch {
 		ResearchCategories.registerCategory("MIDDLEEARTH", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/map.png"));
 		ResearchCategories.registerCategory("FREEPEOPLE", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/freepeople.png"));
 		ResearchCategories.registerCategory("SAURON", new ResourceLocation("middleearththaumaturgy","textures/misc/middleearth.png"), new ResourceLocation("middleearththaumaturgy","textures/misc/sauron.png"));
-		
+
 		addBasicMaterials();
 		addJars();
 		addCommon();
 		addFreePeople();
 		addSauron();
-		
-		if(Loader.isModLoaded("Automagy"))
+
+		if(Loader.isModLoaded("Automagy") && MeetCfg.automagy)
 		{
 			(new MiddleEarthResearchItem(
 					"BOOKSHELFINVENTARIUM",
@@ -54,7 +55,7 @@ public class MiddleEarthResearch {
 		}
 
 	}
-	
+
 	private static void addBasicMaterials() {
 		(new MiddleEarthResearchItem(
 				"GULDURILBLACKURUK",
@@ -68,7 +69,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("GuldurilBlackUruk"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 			(
 				"CAP_blackuruksteel",
@@ -85,8 +86,8 @@ public class MiddleEarthResearch {
 		})
 		.setSecondary()
 		.setParents(new String[] {"GULDURILBLACKURUK"}).registerResearchItem();
-		
-		
+
+
 		(new MiddleEarthResearchItem(
 				"ITHILDINBLUEDWARVEN",
 				"FREEPEOPLE",
@@ -99,7 +100,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("IthildinBlueDwarven"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_bluedwarvensteel",
@@ -116,7 +117,7 @@ public class MiddleEarthResearch {
 			})
 		.setSecondary()
 		.setParents(new String[] {"ITHILDINBLUEDWARVEN"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"ITHILDINDWARVEN",
 				"FREEPEOPLE",
@@ -129,7 +130,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("IthildinDwarven"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_dwarvensteel",
@@ -146,7 +147,7 @@ public class MiddleEarthResearch {
 			})
 			.setSecondary()
 		.setParents(new String[] {"ITHILDINDWARVEN"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"EDHELMIRELVEN",
 				"FREEPEOPLE",
@@ -159,7 +160,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("EdhelmirElven"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_elvensteel",
@@ -176,7 +177,7 @@ public class MiddleEarthResearch {
 			})
 			.setSecondary()
 		.setParents(new String[] {"EDHELMIRELVEN"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"DAEDELOSGALVORN",
 				"FREEPEOPLE",
@@ -189,7 +190,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("DaedelosGalvorn"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_galvorn",
@@ -206,7 +207,7 @@ public class MiddleEarthResearch {
 			})
 			.setSecondary()
 		.setParents(new String[] {"DAEDELOSGALVORN"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"STAREDMITHRIL",
 				"MIDDLEEARTH",
@@ -219,7 +220,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("StaredMithril"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"CAP_mithril",
 				"MIDDLEEARTH",
@@ -234,7 +235,7 @@ public class MiddleEarthResearch {
 		)
 		.setSecondary()
 		.setParents(new String[] {"STAREDMITHRIL"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"DAEDELOSMORGUL",
 				"SAURON",
@@ -247,7 +248,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("DaedelosMorgul"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_morgulsteel",
@@ -264,7 +265,7 @@ public class MiddleEarthResearch {
 			})
 			.setSecondary()
 		.setParents(new String[] {"DAEDELOSMORGUL"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"DURNAURORC",
 				"SAURON",
@@ -277,7 +278,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("DurnaurOrc"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_orcsteel",
@@ -294,7 +295,7 @@ public class MiddleEarthResearch {
 			})
 			.setSecondary()
 		.setParents(new String[] {"DURNAURORC"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"GULDURILURUK",
 				"SAURON",
@@ -307,7 +308,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("GuldurilUruk"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_uruksteel",
@@ -324,7 +325,7 @@ public class MiddleEarthResearch {
 			})
 			.setSecondary()
 		.setParents(new String[] {"GULDURILURUK"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"BRIGHTENGILDEDIRON",
 				"MIDDLEEARTH",
@@ -337,7 +338,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("BrightenGildediron"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem
 				(
 					"CAP_gildediron",
@@ -355,9 +356,9 @@ public class MiddleEarthResearch {
 			.setSecondary()
 		.setParents(new String[] {"BRIGHTENGILDEDIRON"}).registerResearchItem();
 	}
-	
+
 	private static void addJars() {
-		
+
 		(new MiddleEarthResearchItem(
 				"COMP_JAR",
 				"MIDDLEEARTH",
@@ -370,7 +371,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((IArcaneRecipe) recipes.get("CompJar"))
 				}
 		).setParents(new String[] {"JARLABEL"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"X2COMP_JAR",
 				"MIDDLEEARTH",
@@ -383,7 +384,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((IArcaneRecipe) recipes.get("X2CompJar"))
 				}
 		).setParents(new String[] {"COMP_JAR"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"EXTREMEJARCAP",
 				"MIDDLEEARTH",
@@ -397,7 +398,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((IArcaneRecipe) recipes.get("ExtremeJar"))
 				}
 		).setParents(new String[] {"X2COMP_JAR"}).registerResearchItem();
-		
+
 	}
 
 	private static void addCommon() {
@@ -414,7 +415,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RingWarpward"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"HANDHELDCRAFTER",
 				"MIDDLEEARTH",
@@ -450,7 +451,7 @@ public class MiddleEarthResearch {
 				}
 		).setSecondary()
 		.setParents(new String[] {"ALCHEMICALDUPLICATION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"EDHELMIRTRANS",
 				"FREEPEOPLE",
@@ -464,7 +465,7 @@ public class MiddleEarthResearch {
 				}
 		).setSecondary()
 		.setParents(new String[] {"ALCHEMICALDUPLICATION"}).registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"GULDURILTRANS",
 				"SAURON",
@@ -478,7 +479,7 @@ public class MiddleEarthResearch {
 				}
 		).setSecondary()
 		.setParents(new String[] {"ALCHEMICALDUPLICATION"}).registerResearchItem();
-		
+
 	}
 
 	private static void addFreePeople() {
@@ -495,7 +496,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodGONDOR"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_GONDOR",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.GONDOR, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				-1, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 0))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_GONDOR.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffGONDOR"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_GONDOR"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_HOBBIT",
 				"FREEPEOPLE",
@@ -508,7 +523,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodHOBBIT"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_HOBBIT",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.SHIRE, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.HOBBITS, 3),
+				0, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 1))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_HOBBIT.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffHOBBIT"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_HOBBIT"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_RANGER_NORTH",
 				"FREEPEOPLE",
@@ -521,7 +550,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodRANGER_NORTH"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_RANGER_NORTH",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DUNEDAIN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				1, -5, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 2))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_RANGER_NORTH.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffRANGER_NORTH"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_RANGER_NORTH"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_BLUE_MOUNTAINS",
 				"FREEPEOPLE",
@@ -530,11 +573,25 @@ public class MiddleEarthResearch {
 				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 3))
 				)
 		.setPages(new ResearchPage[] {
-				new ResearchPage("middleearththaumaturgy.research_page.BLUE_MOUNTAINS.1"),
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_BLUE_MOUNTAINS.1"),
 				new ResearchPage((InfusionRecipe) recipes.get("RodBLUE_MOUNTAINS"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_BLUE_MOUNTAINS",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.BLUEMOUNTAINS, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.DWARVES, 3),
+				2, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 3))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_BLUE_MOUNTAINS.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffBLUE_MOUNTAINS"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_BLUE_MOUNTAINS"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_HIGH_ELF",
 				"FREEPEOPLE",
@@ -549,6 +606,20 @@ public class MiddleEarthResearch {
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
 
 		(new MiddleEarthResearchItem(
+				"STAFF_HIGH_ELF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.LINDON, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ELVES, 3),
+				3, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 4))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_HIGH_ELF.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffHIGH_ELF"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_HIGH_ELF"}).setConcealed().registerResearchItem();
+
+		(new MiddleEarthResearchItem(
 				"ROD_WOOD_ELF",
 				"FREEPEOPLE",
 				(new AspectList()).add(MiddleEarthAspects.WOODLAND, 5).add(Aspect.MAGIC, 1),
@@ -560,7 +631,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodWOOD_ELF"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_WOOD_ELF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.WOODLAND, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ELVES, 3),
+				2, 2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 7))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_WOOD_ELF.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffWOOD_ELF"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_WOOD_ELF"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_DALE",
 				"FREEPEOPLE",
@@ -573,7 +658,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodDALE"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_DALE",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DALE, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				1, 3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 9))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_DALE.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffDALE"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_DALE"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_DWARF",
 				"FREEPEOPLE",
@@ -586,7 +685,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodDWARF"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_DWARF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.IRONHILLS, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.DWARVES, 3),
+				0, 2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 10))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_DWARF.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffDWARF"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_DWARF"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_GALADHRIM",
 				"FREEPEOPLE",
@@ -599,7 +712,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodGALADHRIM"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_GALADHRIM",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.LOTHLORIEN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ELVES, 3),
+				-2, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 11))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_GALADHRIM.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffGALADHRIM"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_GALADHRIM"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_FANGORN",
 				"FREEPEOPLE",
@@ -612,7 +739,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodFANGORN"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_FANGORN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.FANGORN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ENTS, 3),
+				-2, 2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 14))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_FANGORN.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffFANGORN"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_FANGORN"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_ROHAN",
 				"FREEPEOPLE",
@@ -625,7 +766,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodROHAN"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_ROHAN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.ROHAN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				-3, -5, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 15))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_ROHAN.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffROHAN"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_ROHAN"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_DORWINION",
 				"FREEPEOPLE",
@@ -638,7 +793,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodDORWINION"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_DORWINION",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DORWINION, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				-3, 3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 17))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_DORWINION.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffDORWINION"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_DORWINION"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_TAUREDAIN",
 				"FREEPEOPLE",
@@ -651,8 +820,22 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodTAUREDAIN"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+
+		(new MiddleEarthResearchItem(
+				"STAFF_TAUREDAIN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.TAUREDAIN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				-4, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 21))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_TAUREDAIN.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffTAUREDAIN"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_TAUREDAIN"}).setConcealed().registerResearchItem();
 	}
-	
+
 	private static void addSauron()
 	{
 		(new MiddleEarthResearchItem(
@@ -667,7 +850,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodGUNDABAD"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_GUNDABAD",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.GUNDABAD, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ORCS, 3),
+				-1, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 5))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_GUNDABAD.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffGUNDABAD"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_GUNDABAD"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_ANGMAR",
 				"SAURON",
@@ -680,7 +877,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodANGMAR"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_ANGMAR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.ANGMAR, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ORCS, 3),
+				0, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 6))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_ANGMAR.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffANGMAR"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_ANGMAR"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_DOL_GULDUR",
 				"SAURON",
@@ -693,7 +904,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodDOL_GULDUR"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_DOL_GULDUR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.DOLGULDUR, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ORCS, 3),
+				1, -5, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 8))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_DOL_GULDUR.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffDOL_GULDUR"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_DOL_GULDUR"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_DUNLAND",
 				"SAURON",
@@ -706,7 +931,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodDUNLAND"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_DUNLAND",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.DUNLAND, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				2, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 12))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_DUNLAND.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffDUNLAND"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_DUNLAND"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_URUK_HAI",
 				"SAURON",
@@ -719,7 +958,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodURUK_HAI"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_URUK_HAI",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.ISENGARD, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.URUKS, 3),
+				3, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 13))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_URUK_HAI.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffURUK_HAI"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_GUNDABAD"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_MORDOR",
 				"SAURON",
@@ -732,7 +985,7 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodMORDOR"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
 		(new MiddleEarthResearchItem(
 				"ROD_RHUN",
 				"SAURON",
@@ -745,7 +998,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodRHUN"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_RHUN",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.RHUDEL, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				1, 3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 18))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_RHUN.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffRHUN"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_RHUN"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_NEAR_HARAD",
 				"SAURON",
@@ -758,7 +1025,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodNEAR_HARAD"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_NEAR_HARAD",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.NEARHARAD, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				0, 2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 19))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_NEAR_HARAD.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffNEAR_HARAD"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_NEAR_HARAD"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_MOREDAIN",
 				"SAURON",
@@ -771,7 +1052,21 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodMOREDAIN"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
-		
+
+		(new MiddleEarthResearchItem(
+				"STAFF_MOREDAIN",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.MOREDAIN, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				-3, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 20))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_MOREDAIN.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffMOREDAIN"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_MOREDAIN"}).setConcealed().registerResearchItem();
+
 		(new MiddleEarthResearchItem(
 				"ROD_HALF_TROLL",
 				"SAURON",
@@ -784,6 +1079,20 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodHALF_TROLL"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+
+		(new MiddleEarthResearchItem(
+				"STAFF_HALF_TROLL",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.HALFTROLLS, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.TROLLS, 3),
+				5, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 22))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_HALF_TROLL.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffHALF_TROLL"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_HALF_TROLL"}).setConcealed().registerResearchItem();
 	}
 
 }

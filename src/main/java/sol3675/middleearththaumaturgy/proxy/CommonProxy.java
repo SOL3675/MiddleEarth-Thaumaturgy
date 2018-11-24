@@ -32,10 +32,10 @@ public class CommonProxy{
 		MeetCfg.configurate(event.getSuggestedConfigurationFile());
 		MiddleEarthAspects.initAspects();
 		MiddleEarthThaumaturgyItems.addItems();
-		if(Loader.isModLoaded("TravellersGear")) {
+		if(Loader.isModLoaded("TravellersGear") && MeetCfg.travellersgear) {
 			ItemTitle.addTitleItems();
 		}
-		if(Loader.isModLoaded("ThaumicTinkerer"))
+		if(Loader.isModLoaded("ThaumicTinkerer") && MeetCfg.thaumictinkerer)
 		{
 			TTCompatRegister.TTpreInit();
 		}
@@ -53,7 +53,7 @@ public class CommonProxy{
 	
 	public void postInit(FMLPostInitializationEvent event) {
 		Recipes.addRecipes();
-		if(Loader.isModLoaded("Automagy"))
+		if(Loader.isModLoaded("Automagy") && MeetCfg.automagy)
 		{
 			BlockBookshelfInventarium.addRecipeAutomagy();
 		}
