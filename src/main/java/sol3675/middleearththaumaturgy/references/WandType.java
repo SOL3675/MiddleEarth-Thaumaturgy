@@ -27,4 +27,10 @@ public class WandType {
 			"TAUREDAIN",
 			"HALF_TROLL"
 		};
+	
+	private static final String F = "FREEPEOPLE";
+	private static final String S = "SAURON";
+	
+	public static final String[] category =
+		{F, F, F, F, F, S, S, F, S, F, F, F, S, S, F, F, S, F, S, S, S, F, S};
 }

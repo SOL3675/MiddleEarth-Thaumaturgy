@@ -1,8 +1,11 @@
 package sol3675.middleearththaumaturgy.common.items.wands;
 
+import java.util.List;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -35,6 +38,14 @@ public IIcon[] icon;
 	@Override
 	public IIcon getIconFromDamage(int meta) {
 		return this.icon[meta];
+	}
+	
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void getSubItems(Item item, CreativeTabs tab, List list) {
+		for (int i = 0; i < WandType.types.length; ++i) {
+			list.add(new ItemStack(this, 1, i));
+		}
 	}
 	
 	@Override

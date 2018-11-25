@@ -8,6 +8,7 @@ This is one of the minecraft mod that add contents themed LotR and Thaumcraft 4.
 - Thaumcraft 4
 - TravellersGear(Optional)
 - Automagy(Optional)
+- Thaumic Tinkerer(Optional)
 
 ## Authors
 - SOL3675 (SOL's Gaming)
@@ -16,6 +17,5 @@ This is one of the minecraft mod that add contents themed LotR and Thaumcraft 4.
 - Add way to get TG contents
 - Add more powerful wand
 - Add Foci that can summon NPCs
-- Add Thaumic Tinkerer support
 - Add way to obtain Nether Star, so you can get it only in the Middle-Earth
 - All Thaumcraft contents are able to access in the Middle-Earth(Priority: Low)

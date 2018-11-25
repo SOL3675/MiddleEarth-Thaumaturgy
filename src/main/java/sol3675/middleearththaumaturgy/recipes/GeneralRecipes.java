@@ -9,9 +9,11 @@ import lotr.common.recipe.LOTRRecipes;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+import sol3675.middleearththaumaturgy.MiddleEarthResearch;
 import sol3675.middleearththaumaturgy.common.blocks.BlockStorage;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
 import sol3675.middleearththaumaturgy.common.items.ItemMaterialNugget;
@@ -47,7 +49,7 @@ public class GeneralRecipes {
 		
 		addStorageRecipes();
 		
-		if(MeetCfg.easyFactionCrafter == true)
+		if(MeetCfg.easyFactionCrafter)
 		{
 			addEasyFactionCrafter();
 		}
@@ -66,9 +68,9 @@ public class GeneralRecipes {
 	
 	private static void addGeneralLotrRecipes() {
 		
-		GameRegistry.addRecipe(new ItemStack(MiddleEarthThaumaturgyItems.materials, 2, 10), new Object[] {" S ", "SXS", " S ", 'S', LotrItems.get("item.guldurilCrystal"), 'X', Items.slime_ball});
-		GameRegistry.addRecipe(new ItemStack(MiddleEarthThaumaturgyItems.materials, 2, 10), new Object[] {" S ", "SXS", " S ", 'S', LotrItems.get("item.quenditeCrystal"), 'X', Items.slime_ball});
-		GameRegistry.addRecipe(new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 11), new Object[] {" S ", "SXS", " S ", 'S', LotrItems.get("item.emerald"), 'X', new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 10)});
+		MiddleEarthResearch.recipes.put("JarBinderG", CraftingManager.getInstance().addRecipe(new ItemStack(MiddleEarthThaumaturgyItems.materials, 2, 10), new Object[] {" S ", "SXS", " S ", 'S', LotrItems.get("item.guldurilCrystal"), 'X', Items.slime_ball}));
+		MiddleEarthResearch.recipes.put("JarBinderQ", CraftingManager.getInstance().addRecipe(new ItemStack(MiddleEarthThaumaturgyItems.materials, 2, 10), new Object[] {" S ", "SXS", " S ", 'S', LotrItems.get("item.quenditeCrystal"), 'X', Items.slime_ball}));
+		MiddleEarthResearch.recipes.put("JarBinderMystical", CraftingManager.getInstance().addRecipe(new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 11), new Object[] {" S ", "SXS", " S ", 'S', LotrItems.get("item.emerald"), 'X', new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 10)}));
 		
 	}
 	

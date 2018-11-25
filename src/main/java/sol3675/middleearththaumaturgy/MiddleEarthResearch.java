@@ -5,13 +5,17 @@ import java.util.HashMap;
 import cpw.mods.fml.common.Loader;
 import lotr.common.LOTRMod;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import sol3675.middleearththaumaturgy.MiddleEarthResearchItem;
 import sol3675.middleearththaumaturgy.aspect.MiddleEarthAspects;
 import sol3675.middleearththaumaturgy.common.blocks.MiddleEarthThaumaturgyBlocks;
+import sol3675.middleearththaumaturgy.common.items.ItemTTCompat;
 import sol3675.middleearththaumaturgy.common.items.MiddleEarthThaumaturgyItems;
 import sol3675.middleearththaumaturgy.config.MeetCfg;
+import sol3675.middleearththaumaturgy.helper.ResearchHelper;
 import sol3675.middleearththaumaturgy.references.LibMisc;
+import sol3675.middleearththaumaturgy.references.WandType;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.CrucibleRecipe;
@@ -37,6 +41,12 @@ public class MiddleEarthResearch {
 		addCommon();
 		addFreePeople();
 		addSauron();
+
+		if(Loader.isModLoaded("ThaumicTinkerer") && MeetCfg.thaumictinkerer)
+		{
+			addTTCompatResearch();
+		}
+
 
 		if(Loader.isModLoaded("Automagy") && MeetCfg.automagy)
 		{
@@ -368,7 +378,9 @@ public class MiddleEarthResearch {
 				)
 		.setPages(new ResearchPage[] {
 				new ResearchPage("middleearththaumaturgy.research_page.COMP_JAR.1"),
-				new ResearchPage((IArcaneRecipe) recipes.get("CompJar"))
+				new ResearchPage((IArcaneRecipe) recipes.get("CompJar")),
+				new ResearchPage((IRecipe) recipes.get("JarBinderG")),
+				new ResearchPage((IRecipe) recipes.get("JarBinderQ"))
 				}
 		).setParents(new String[] {"JARLABEL"}).registerResearchItem();
 
@@ -381,7 +393,8 @@ public class MiddleEarthResearch {
 				)
 		.setPages(new ResearchPage[] {
 				new ResearchPage("middleearththaumaturgy.research_page.X2COMP_JAR.1"),
-				new ResearchPage((IArcaneRecipe) recipes.get("X2CompJar"))
+				new ResearchPage((IArcaneRecipe) recipes.get("X2CompJar")),
+				new ResearchPage((IRecipe) recipes.get("JarBinderMystical"))
 				}
 		).setParents(new String[] {"COMP_JAR"}).registerResearchItem();
 
@@ -985,6 +998,20 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("RodMORDOR"))
 				}
 		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"STAFF_MORDOR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.MORDOR, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.ORCS, 3),
+				2, 2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 16))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.STAFF_MORDOR.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffMORDOR"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_MORDOR"}).setConcealed().registerResearchItem();
 
 		(new MiddleEarthResearchItem(
 				"ROD_RHUN",
@@ -1093,6 +1120,195 @@ public class MiddleEarthResearch {
 				}
 		).setSecondary()
 		.setParents(new String[] {"ROD_HALF_TROLL"}).setConcealed().registerResearchItem();
+	}
+
+	private static void addTTCompatResearch()
+	{
+		int i = 0;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.GONDOR, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.GREED, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-1, -5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.SHIRE, 5).add(Aspect.MAGIC, 1).add(Aspect.CROP, 8).add(MiddleEarthAspects.HOBBITS, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				0, -6, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.DUNEDAIN, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.MIND, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				1, -7, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.BLUEMOUNTAINS, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.DWARVES, 8).add(Aspect.MINE, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				2, -6, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.LINDON, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ELVES, 8).add(Aspect.WATER, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				3, -5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.GUNDABAD, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ORCS, 8).add(Aspect.EARTH, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-1, -5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.ANGMAR, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ORCS, 8).add(Aspect.TRAP, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				0, -6, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.WOODLAND, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ELVES, 8).add(Aspect.TREE, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				2, 4, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.DOLGULDUR, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ORCS, 8).add(Aspect.DARKNESS, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				1, -7, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.DALE, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.CLOTH, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				1, 5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.IRONHILLS, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.DWARVES, 8).add(Aspect.TOOL, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				0, 4, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.LOTHLORIEN, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ELVES, 8).add(MiddleEarthAspects.IMMORTAL, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-2, -6, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.DUNLAND, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.BEAST, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				2, -6, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.ISENGARD, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.URUKS, 8).add(Aspect.WEAPON, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				3, -5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.FANGORN, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ENTS, 8).add(MiddleEarthAspects.HUORNS, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-2, 4, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.ROHAN, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.BEAST, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-3, -7, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.MORDOR, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.ORCS, 8).add(Aspect.UNDEAD, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				2, 4, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.DORWINION, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.CROP, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-3, 5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.RHUDEL, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.TRAVEL, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				1, 3, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.NEARHARAD, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.FIRE, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				0, 2, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.MOREDAIN, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.POISON, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-3, 3, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.TAUREDAIN, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.TREE, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-4, -6, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.HALFTROLLS, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(MiddleEarthAspects.TROLLS, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				5, -5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
 	}
 
 }

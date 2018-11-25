@@ -207,7 +207,7 @@ public class Recipes {
 						8,
 						(new AspectList().add(Aspect.AURA, 64).add(Aspect.TAINT, 64).add(MiddleEarthAspects.WIZARDS, 64).add(MiddleEarthAspects.IMMORTAL, 64)),
 						new ItemStack(LotrItems.get("item.goldRing")),
-						new ItemStack[] {new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5), new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5), new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5)}
+						new ItemStack[] {new ItemStack(ConfigItems.itemSanitySoap), new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5), new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5), new ItemStack(MiddleEarthThaumaturgyItems.nuggets, 1, 5)}
 						)
 				)
 		;

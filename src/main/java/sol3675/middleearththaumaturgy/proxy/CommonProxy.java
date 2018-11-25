@@ -57,6 +57,10 @@ public class CommonProxy{
 		{
 			BlockBookshelfInventarium.addRecipeAutomagy();
 		}
+		if(Loader.isModLoaded("ThaumicTinkerer") && MeetCfg.thaumictinkerer)
+		{
+			TTCompatRegister.TTpostInit();
+		}
 		MiddleEarthResearch.addResearch();
 		LotrAspectRegister.setAspectLotr();
 		
