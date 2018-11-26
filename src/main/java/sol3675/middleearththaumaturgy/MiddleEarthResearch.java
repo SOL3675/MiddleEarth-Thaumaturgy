@@ -1272,7 +1272,7 @@ public class MiddleEarthResearch {
 		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
 				(new AspectList()).add(MiddleEarthAspects.RHUDEL, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.TRAVEL, 13),
 				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
-				1, 3, 3, 1,
+				1, 5, 3, 1,
 				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
 				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
 				false, false, true);
@@ -1280,7 +1280,7 @@ public class MiddleEarthResearch {
 		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
 				(new AspectList()).add(MiddleEarthAspects.NEARHARAD, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.FIRE, 13),
 				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
-				0, 2, 3, 1,
+				0, 4, 3, 1,
 				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
 				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
 				false, false, true);
