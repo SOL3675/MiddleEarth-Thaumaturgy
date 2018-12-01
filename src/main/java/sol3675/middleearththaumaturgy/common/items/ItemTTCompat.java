@@ -26,7 +26,8 @@ public class ItemTTCompat {
 		
 		for(int i = 0; i < WandType.types.length; ++i)
 		{
-			WAND_ROD_TT[i] = new WandRod(WandType.types[i] + "_TT", 1000, new ItemStack(wandCoreTT, 1, i), 12, new FactionWandUpdateTT(WandType.faction[i]), new ResourceLocation(LibMisc.MODFULLID, "textures/models/wand_rod_" + WandType.typesName[i] + ".png"));
+			WAND_ROD_TT[i] = new WandRod(WandType.types[i] + "_TT", 1000, new ItemStack(wandCoreTT, 1, i), 12, new FactionWandUpdateTT(WandType.faction[i]), new ResourceLocation(LibMisc.MODFULLID, "textures/models/wand_rod_tt_" + WandType.typesName[i] + ".png"));
+			WAND_ROD_TT[i].setGlowing(true);
 		}
 
 	}

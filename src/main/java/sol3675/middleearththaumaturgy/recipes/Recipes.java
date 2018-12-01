@@ -518,11 +518,11 @@ public class Recipes {
 						)
 				)
 		;
-		
+
 		for(int i = 0; i<WandType.types.length; ++i)
 		{
 			MiddleEarthResearch.recipes.put("Staff" + WandType.types[i],
-					ThaumcraftApi.addArcaneCraftingRecipe("STAFF_" + WandType.types[i],
+					ThaumcraftApi.addArcaneCraftingRecipe("ROD_" + WandType.types[i] + "_staff",
 					new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, i),
 					(new AspectList().add(Aspect.AIR, 80).add(Aspect.EARTH, 80).add(Aspect.FIRE, 80).add(Aspect.WATER, 80).add(Aspect.ORDER, 80).add(Aspect.ENTROPY, 80)),
 					new Object[] {"  P", " W ", "W  ", Character.valueOf('P'), new ItemStack(ConfigItems.itemResource, 1, 15), Character.valueOf('W'), new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, i)})

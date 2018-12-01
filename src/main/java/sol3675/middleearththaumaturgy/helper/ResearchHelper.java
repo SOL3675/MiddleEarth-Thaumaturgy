@@ -28,7 +28,7 @@ public class ResearchHelper {
 		
 		for(int i = 0; i<pageAmount; ++i)
 		{
-			pages[i] = new ResearchPage(RESEARCH_PREFIX + researchName + "." + String.valueOf(i));
+			pages[i] = new ResearchPage(RESEARCH_PREFIX + researchName + "." + String.valueOf(i + 1));
 		}
 		
 		switch (recipe)

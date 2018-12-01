@@ -73,11 +73,8 @@ public class MiddleEarthThaumaturgyItems {
 		for(int i = 0; i < WandType.types.length; ++i)
 		{
 			WAND_ROD[i] = new WandRod(WandType.types[i], 100, new ItemStack(wandCore, 1, i), 12, new FactionWandUpdate(WandType.faction[i]), new ResourceLocation(LibMisc.MODFULLID, "textures/models/wand_rod_" + WandType.typesName[i] + ".png"));
-		}
-		
-		for(int i = 0; i < WandType.types.length; ++i)
-		{
 			STAFF_ROD[i] = new StaffRod(WandType.types[i], 250, new ItemStack(staffCore, 1, i), 15, new FactionWandUpdate(WandType.faction[i]), new ResourceLocation(LibMisc.MODFULLID, "textures/models/wand_rod_" + WandType.typesName[i] + ".png"));
+			STAFF_ROD[i].setRunes(true);
 		}
 		
 		WAND_CAP_MITHRIL = new MiddleEarthWandCap("mithril", 0.65F, new ItemStack(wandCap, 1, 0), 6, new ResourceLocation(LibMisc.MODFULLID,"textures/models/wand_cap_mithril.png"));

@@ -4,7 +4,7 @@ public class LibMisc {
 	
 	public static final String MODID = "mett";
 	public static final String MODNAME = "Middle-Earth Thaumaturgy";
-	public static final String VERSION = "0.5.6";
+	public static final String VERSION = "0.6.0";
 	public static final String DEPENDENCIES = "required-after:lotr;required-after:Thaumcraft";
 	
 	public static final String MODFULLID = "middleearththaumaturgy";
