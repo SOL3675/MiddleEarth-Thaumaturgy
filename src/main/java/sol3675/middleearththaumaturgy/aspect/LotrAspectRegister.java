@@ -316,7 +316,7 @@ public class LotrAspectRegister {
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.dolAmrothCraftingTable"),1 ,0), new AspectList().add(Craft, 4).add(Gondor, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.moredainCraftingTable"),1 ,0), new AspectList().add(Craft, 4).add(Moredain, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.scorchedStone"),1 ,0), new AspectList().add(Earth, 2).add(Fire, 1));
-			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.elvenForge"),1 ,0), new AspectList().add(Earth, 6).add(Fire, 3).add(Tool, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.alloyForge"),1 ,0), new AspectList().add(Earth, 6).add(Fire, 3).add(Tool, 2));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.tauredainCraftingTable"),1 ,0), new AspectList().add(Craft, 4).add(Tauredain, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.brick4"),1 ,0), new AspectList().add(Earth, 2).add(Tauredain, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrBlocks.get("tile.brick4"),1 ,1), new AspectList().add(Earth, 1).add(Plant, 1).add(Tauredain, 1));
