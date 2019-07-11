@@ -1,8 +1,6 @@
 package sol3675.middleearththaumaturgy.gui;
 
 import baubles.common.network.PacketHandler;
-import lotr.common.LOTRAlignmentValues;
-import lotr.common.LOTRFaction;
 import lotr.common.LOTRLevelData;
 import lotr.common.LOTRMod;
 import net.minecraft.client.gui.GuiButton;

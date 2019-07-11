@@ -1,6 +1,6 @@
 package sol3675.middleearththaumaturgy.references;
 
-import lotr.common.LOTRFaction;
+import lotr.common.fac.LOTRFaction;
 
 public class WandType {
 	public final static String[] types = 

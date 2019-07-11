@@ -1,6 +1,6 @@
 package sol3675.middleearththaumaturgy.common.items.wands;
 
-import lotr.common.LOTRFaction;
+import lotr.common.fac.LOTRFaction;
 import lotr.common.LOTRLevelData;
 import lotr.common.LOTRPlayerData;
 import net.minecraft.entity.player.EntityPlayer;
@@ -39,18 +39,18 @@ public class FactionWandUpdate implements IWandRodOnUpdate{
 		}
 	}
 
-	int getVisRecovery(int alignment)
+	int getVisRecovery(float alignment)
 	{
 		int i = 0;
-		if (alignment >= 10000)
+		if (alignment >= 10000.0F)
 		{
 			i = 50;
 		}
-		else if (alignment >= 1000)
+		else if (alignment >= 1000.0F)
 		{
 			i = 10;
 		}
-		else if (alignment >= 100)
+		else if (alignment >= 100.0F)
 		{
 			i = 5;
 		}

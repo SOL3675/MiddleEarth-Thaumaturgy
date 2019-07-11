@@ -4,8 +4,8 @@ import java.util.List;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import lotr.common.LOTRAlignmentValues;
-import lotr.common.LOTRFaction;
+import lotr.common.fac.LOTRAlignmentValues;
+import lotr.common.fac.LOTRFaction;
 import lotr.common.LOTRLevelData;
 import lotr.common.LOTRMod;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -72,17 +72,17 @@ public class ItemHandheldFactionCrafter extends Item{
 			player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.HANDHELDCRAFTING, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 		}
 		else if(!world.isRemote && stack.hasTagCompound()) {
-			
+
 			NBTTagList tags = (NBTTagList)stack.getTagCompound().getTag("Items");
 			ItemStack firstItem = ItemStack.loadItemStackFromNBT(tags.getCompoundTagAt(0));
-			
+
 			if(firstItem == null)
 			{
 				//player.addChatComponentMessage(new ChatComponentTranslation("mett.chat." + "nocrafter"));
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.hobbitTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HOBBIT)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HOBBIT)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, HOBBIT, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -93,7 +93,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.rangerTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.RANGER_NORTH)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.RANGER_NORTH)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, RANGER, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -104,7 +104,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.blueDwarvenTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.BLUE_MOUNTAINS)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.BLUE_MOUNTAINS)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, BLUE_MOUNTAINS, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -115,7 +115,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.highElvenTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HIGH_ELF)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HIGH_ELF)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, LINDON, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -126,7 +126,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.gundabadTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GUNDABAD)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GUNDABAD)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, GUNDABAD, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -137,7 +137,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.angmarTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.ANGMAR)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.ANGMAR)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, ANGMAR, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -148,7 +148,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.woodElvenTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.WOOD_ELF)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.WOOD_ELF)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, WOOD_ELF, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -159,7 +159,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.dolGuldurTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DOL_GULDUR)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DOL_GULDUR)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, DOL_GULDUR, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -170,7 +170,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.daleTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DALE)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DALE)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, DALISH, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -181,7 +181,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.dwarvenTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DWARF)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DWARF)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, DWARVEN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -192,7 +192,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.elvenTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GALADHRIM)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GALADHRIM)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, GALADHRIM, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -203,7 +203,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.dunlendingTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DUNLAND)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DUNLAND)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, DUNLENDING, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -214,7 +214,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.urukTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.URUK_HAI)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.URUK_HAI)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, URUK, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -225,7 +225,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.rohirricTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.ROHAN)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.ROHAN)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, ROHIRRIC, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -236,7 +236,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.gondorianTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GONDOR)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GONDOR)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, GONDORIAN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -247,7 +247,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.dolAmrothTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GONDOR)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GONDOR)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, DOL_AMROTH, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -258,7 +258,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.morgulTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.MORDOR)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.MORDOR)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, MORGUL, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -269,7 +269,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.dorwinionTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DORWINION)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DORWINION)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, DORWINION, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -280,7 +280,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.rhunTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.RHUN)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.RHUN)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, RHUNIC, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -291,7 +291,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.nearHaradTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.NEAR_HARAD)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.NEAR_HARAD)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, HARADRIC, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -302,7 +302,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.moredainTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.MOREDAIN)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.MOREDAIN)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, MOREDAIN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -313,7 +313,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.tauredainTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.TAUREDAIN)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.TAUREDAIN)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, TAUREDAIN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -324,7 +324,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.halfTrollTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HALF_TROLL)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HALF_TROLL)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, HALF_TROLL, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -335,7 +335,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.rivendellTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HIGH_ELF)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.HIGH_ELF)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, RIVENDELL, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -346,7 +346,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.umbarTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.NEAR_HARAD)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.NEAR_HARAD)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, UMBARIC, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
@@ -357,7 +357,7 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.gulfTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.NEAR_HARAD)>0)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.NEAR_HARAD)>=1.0F)
 				{
 					player.openGui(LOTRMod.instance, GULFEN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
