@@ -20,6 +20,7 @@ import sol3675.middleearththaumaturgy.gui.GuiHandler;
 import sol3675.middleearththaumaturgy.network.PacketHandler;
 import sol3675.middleearththaumaturgy.recipes.GeneralRecipes;
 import sol3675.middleearththaumaturgy.recipes.Recipes;
+import sol3675.middleearththaumaturgy.references.SummonList;
 import sol3675.middleearththaumaturgy.register.TTCompatRegister;
 
 public class CommonProxy{
@@ -48,7 +49,7 @@ public class CommonProxy{
 		
 		GeneralRecipes.addGeneralRecipes();
 		NetworkRegistry.INSTANCE.registerGuiHandler(MiddleEarthThaumaturgy.instance, new GuiHandler());
-		
+		SummonList.createMobLists();
 	}
 	
 	public void postInit(FMLPostInitializationEvent event) {

@@ -406,6 +406,11 @@ public class LotrAspectRegister {
 			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,5), new AspectList().add(Earth, 1).add(Crystal, 3).add(Greed, 3));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,6), new AspectList().add(Earth, 1).add(Crystal, 1).add(Immortal, 1));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.oreGem,1 ,7), new AspectList().add(Earth, 1).add(Crystal, 3).add(Greed, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.umbarTable), new AspectList().add(Craft, 4).add(Nearharad, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.gulfTable), new AspectList().add(Craft, 4).add(Nearharad, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.chestAncientHarad), new AspectList().add(Earth, 5).add(Nearharad, 1).add(Void, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.utumnoBrickEntrance), new AspectList().add(Earth, 2).add(Utumno, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.orcChain), new AspectList().add(Motion, 1).add(Metal, 1).add(Orcs, 1));
 			
 			//lotr items
 			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.mithril"),1 ,0), new AspectList().add(Metal, 3).add(Dwarves, 1).add(Immortal, 1));
@@ -1047,7 +1052,21 @@ public class LotrAspectRegister {
 			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.coral), new AspectList().add(Crystal, 2).add(Water, 2));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.opal), new AspectList().add(Crystal, 2).add(Immortal, 2));
 			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.emerald), new AspectList().add(Crystal, 4).add(Greed, 5));
-			ThaumcraftApi.registerObjectTag(new ItemStack(LotrItems.get("item.chilling"),1 ,0), new AspectList().add(Cold, 8).add(Magic, 2).add(Utumno, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.chilling), new AspectList().add(Cold, 8).add(Magic, 2).add(Utumno, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.swordMoredain), new AspectList().add(Weapon, 4).add(Metal, 2).add(Moredain, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.helmetGulfHarad), new AspectList().add(Metal, 4).add(Plant, 5).add(Nearharad, 3).add(Armor, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.bodyGulfHarad), new AspectList().add(Metal, 6).add(Plant, 6).add(Nearharad, 6).add(Armor, 5));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.legsGulfHarad), new AspectList().add(Metal, 5).add(Plant, 5).add(Nearharad, 5).add(Armor, 4));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.bootsGulfHarad), new AspectList().add(Metal, 4).add(Plant, 3).add(Nearharad, 3).add(Armor, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.helmetCorsair), new AspectList().add(Cloth, 2).add(Metal, 4).add(Armor, 1).add(Craft, 3).add(Nearharad, 3));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.bodyCorsair), new AspectList().add(Cloth, 4).add(Metal, 6).add(Armor, 3).add(Craft, 6).add(Nearharad, 6));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.legsCorsair), new AspectList().add(Cloth, 2).add(Metal, 5).add(Armor, 2).add(Craft, 5).add(Nearharad, 5));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.bootsCorsair), new AspectList().add(Cloth, 3).add(Metal, 4).add(Armor, 1).add(Craft, 3).add(Nearharad, 3));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.swordCorsair), new AspectList().add(Weapon, 3).add(Metal, 2).add(Nearharad, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.daggerCorsair), new AspectList().add(Weapon, 4).add(Metal, 3).add(Nearharad, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.daggerCorsairPoisoned), new AspectList().add(Weapon, 4).add(Metal, 3).add(Nearharad, 1).add(Poison, 2));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.spearCorsair), new AspectList().add(Weapon, 5).add(Metal, 3).add(Nearharad, 1).add(Tree, 1));
+			ThaumcraftApi.registerObjectTag(new ItemStack(LOTRMod.battleaxeCorsair), new AspectList().add(Weapon, 8).add(Metal, 12).add(Nearharad, 3));
 		}
 		catch(Exception e){
 			//Error
