@@ -38,6 +38,7 @@ public class ItemSummonFocus extends ItemMETTFocus
 	{
 		super("summon");
 		this.setHasSubtypes(true);
+		this.setUnlocalizedName("focus_summon");
 		this.rand = new Random();
 	}
 	
@@ -69,9 +70,21 @@ public class ItemSummonFocus extends ItemMETTFocus
 	}
 	
 	@Override
+	public String getUnlocalizedName(ItemStack stack)
+	{
+		return super.getUnlocalizedName() + "." + WandType.types[stack.getItemDamage()];
+	}
+	
+	@Override
 	public AspectList getVisCost(final ItemStack focus)
 	{
 		return new AspectList().add(Aspect.FIRE, 3000).add(Aspect.EARTH, 3000).add(Aspect.ORDER, 3000);
+	}
+	
+	@Override
+	public WandFocusAnimation getAnimation(ItemStack stack)
+	{
+		return WandFocusAnimation.WAVE;
 	}
 	
 	@Override
@@ -79,6 +92,10 @@ public class ItemSummonFocus extends ItemMETTFocus
 	{
 		final ItemWandCasting wand = (ItemWandCasting)itemStack.getItem();
 		int factionId = wand.getFocusItem(itemStack).getItemDamage();
+		if(pos == null)
+		{
+			return itemStack;
+		}
 		int x = pos.blockX;
 		int y = pos.blockY;
 		int z = pos.blockZ;
@@ -138,7 +155,7 @@ public class ItemSummonFocus extends ItemMETTFocus
 			npc.liftSpawnRestrictions = true;
 			
 			Event.Result canSpawn = ForgeEventFactory.canEntitySpawn(npc, world, (float)npc.posX, (float)npc.posY, (float)npc.posZ);
-			if((canSpawn == Event.Result.ALLOW) || ((canSpawn == Event.Result.DEFAULT) && (npc.getCanSpawnHere())))
+			if(((canSpawn == Event.Result.ALLOW) || ((canSpawn == Event.Result.DEFAULT) && (npc.getCanSpawnHere()))) && wand.consumeAllVis(itemStack, player, this.getVisCost(itemStack), true, false))
 			{
 				npc.liftSpawnRestrictions = false;
 				npc.onSpawnWithEgg(null);
