@@ -160,9 +160,10 @@ public class ItemSummonFocus extends ItemMETTFocus
 				npc.liftSpawnRestrictions = false;
 				npc.onSpawnWithEgg(null);
 				npc.isNPCPersistent = false;
-				world.spawnEntityInWorld(npc);
+				
 				if(!world.isRemote)
 				{
+					world.spawnEntityInWorld(npc);
 					world.playSoundEffect(x, y, z, "thaumcraft:wand", 1.0F, 1.0F);
 				}
 			}
