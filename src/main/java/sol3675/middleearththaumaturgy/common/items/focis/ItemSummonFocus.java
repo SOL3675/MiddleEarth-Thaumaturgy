@@ -33,6 +33,7 @@ public class ItemSummonFocus extends ItemMETTFocus
 	
 	public IIcon[] icon;
 	private Random rand;
+	private IIcon orn;
 	
 	public ItemSummonFocus()
 	{
@@ -51,12 +52,20 @@ public class ItemSummonFocus extends ItemMETTFocus
 		{
 			this.icon[i] = register.registerIcon(LibMisc.MODFULLID + ":focus_" + getName() + "_" + WandType.types[i]);
 		}
+		orn = register.registerIcon(LibMisc.MODFULLID + ":focus_" + getName() + "_orn");
 	}
 	
 	@SideOnly(Side.CLIENT)
 	@Override
 	public IIcon getIconFromDamage(int meta) {
 		return this.icon[meta];
+	}
+	
+	@SideOnly(Side.CLIENT)
+	@Override
+	public IIcon getOrnament(ItemStack focus)
+	{
+		return orn;
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -85,6 +94,12 @@ public class ItemSummonFocus extends ItemMETTFocus
 	public WandFocusAnimation getAnimation(ItemStack stack)
 	{
 		return WandFocusAnimation.WAVE;
+	}
+	
+	@Override
+	public int getFocusColor(final ItemStack focus)
+	{
+		return WandType.color[focus.getItemDamage()];
 	}
 	
 	@Override

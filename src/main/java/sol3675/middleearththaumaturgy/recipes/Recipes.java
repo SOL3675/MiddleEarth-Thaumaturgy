@@ -25,6 +25,7 @@ public class Recipes {
 		addBasicMaterialsRecipe();
 		addJarsRecipe();
 		addWandRods();
+		addFocusRecipes();
 		addCommonRecipe();
 		addTransmutaionRecipes();
 
@@ -527,6 +528,21 @@ public class Recipes {
 					(new AspectList().add(Aspect.AIR, 80).add(Aspect.EARTH, 80).add(Aspect.FIRE, 80).add(Aspect.WATER, 80).add(Aspect.ORDER, 80).add(Aspect.ENTROPY, 80)),
 					new Object[] {"  P", " W ", "W  ", Character.valueOf('P'), new ItemStack(ConfigItems.itemResource, 1, 15), Character.valueOf('W'), new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, i)})
 				);
+		}
+	}
+	
+	private static void addFocusRecipes()
+	{
+		for(int i = 0; i < WandType.types.length; ++i)
+		{
+			MiddleEarthResearch.recipes.put("FocusSummon" + WandType.types[i],
+					ThaumcraftApi.addInfusionCraftingRecipe("FOCUS_SUMMON_" + WandType.types[i],
+							new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, i),
+							7,
+							(new AspectList().add(Aspect.EXCHANGE, 16).add(Aspect.MAGIC, 32).add(WandType.aspect[i], 16)),
+							new ItemStack(ConfigItems.itemResource, 1, 3),
+							new ItemStack[] {/*TO-DO*/})
+			);
 		}
 	}
 

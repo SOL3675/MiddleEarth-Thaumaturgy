@@ -847,6 +847,21 @@ public class MiddleEarthResearch {
 				}
 		).setSecondary()
 		.setParents(new String[] {"ROD_TAUREDAIN"}).setConcealed().registerResearchItem();
+		
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_GONDOR",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.GONDOR, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-7, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 0))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_GONDOR.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonGONDOR"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
 	}
 
 	private static void addSauron()
