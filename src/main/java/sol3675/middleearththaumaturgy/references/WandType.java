@@ -1,8 +1,12 @@
 package sol3675.middleearththaumaturgy.references;
 
+import lotr.common.LOTRMod;
 import lotr.common.fac.LOTRFaction;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import sol3675.middleearththaumaturgy.aspect.MiddleEarthAspects;
 import thaumcraft.api.aspects.Aspect;
+import thaumcraft.common.config.ConfigBlocks;
 
 public class WandType {
 	public final static String[] types = 
@@ -117,6 +121,33 @@ public class WandType {
 				MiddleEarthAspects.MOREDAIN,
 				MiddleEarthAspects.TAUREDAIN,
 				MiddleEarthAspects.HALFTROLLS
+		};
+	
+	public static ItemStack[][] inputStack =
+		{
+				{new ItemStack(LOTRMod.bodyGondor), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 0)},
+				{new ItemStack(LOTRMod.hobbitPancake), new ItemStack(LOTRMod.hobbitBone), new ItemStack(LOTRMod.hobbitBone), new ItemStack(LOTRMod.banner, 1, 21)},
+				{new ItemStack(LOTRMod.bodyRanger), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 12)},
+				{new ItemStack(LOTRMod.bodyBlueDwarven), new ItemStack(LOTRMod.dwarfBone), new ItemStack(LOTRMod.dwarfBone), new ItemStack(LOTRMod.banner, 1, 11)},
+				{new ItemStack(LOTRMod.bodyHighElven), new ItemStack(LOTRMod.elfBone), new ItemStack(LOTRMod.elfBone), new ItemStack(LOTRMod.banner, 1, 10)},
+				{new ItemStack(LOTRMod.bodyGundabadUruk), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.banner, 1, 14)},
+				{new ItemStack(LOTRMod.bodyAngmar), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.banner, 1, 8)},
+				{new ItemStack(LOTRMod.bodyWoodElven), new ItemStack(LOTRMod.elfBone), new ItemStack(LOTRMod.elfBone), new ItemStack(LOTRMod.banner, 1, 4)},
+				{new ItemStack(LOTRMod.bodyDolGuldur), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.banner, 1, 13)},
+				{new ItemStack(LOTRMod.bodyDale), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 19)},
+				{new ItemStack(LOTRMod.bodyDwarven), new ItemStack(LOTRMod.dwarfBone), new ItemStack(LOTRMod.dwarfBone), new ItemStack(LOTRMod.banner, 1, 7)},
+				{new ItemStack(LOTRMod.bodyElven), new ItemStack(LOTRMod.elfBone), new ItemStack(LOTRMod.elfBone), new ItemStack(LOTRMod.banner, 1, 3)},
+				{new ItemStack(LOTRMod.bodyDunlending), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 5)},
+				{new ItemStack(LOTRMod.bodyUruk), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.banner, 1, 6)},
+				{new ItemStack(LOTRMod.entDraught, 1, 2), new ItemStack(LOTRMod.fangornPlant, 1, 2), new ItemStack(LOTRMod.fangornPlant, 1, 2), new ItemStack(ConfigBlocks.blockWoodenDevice, 1, 8)},
+				{new ItemStack(LOTRMod.bodyRohan), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 1)},
+				{new ItemStack(LOTRMod.bodyMorgul), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.orcBone), new ItemStack(LOTRMod.banner, 1, 2)},
+				{new ItemStack(LOTRMod.bodyDorwinion), new ItemStack(Items.bone), new ItemStack(LOTRMod.elfBone), new ItemStack(LOTRMod.banner, 1, 20)},
+				{new ItemStack(LOTRMod.bodyRhun), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 35)},
+				{new ItemStack(LOTRMod.bodyNearHarad), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 9)},
+				{new ItemStack(LOTRMod.bodyMoredain), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 17)},
+				{new ItemStack(LOTRMod.bodyTauredain), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 18)},
+				{new ItemStack(LOTRMod.bodyHalfTroll), new ItemStack(LOTRMod.trollBone), new ItemStack(LOTRMod.trollBone), new ItemStack(LOTRMod.banner, 1, 15)}
 		};
 	
 	public static final int[] color =

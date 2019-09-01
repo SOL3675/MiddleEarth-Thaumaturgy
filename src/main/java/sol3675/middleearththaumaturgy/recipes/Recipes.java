@@ -539,9 +539,9 @@ public class Recipes {
 					ThaumcraftApi.addInfusionCraftingRecipe("FOCUS_SUMMON_" + WandType.types[i],
 							new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, i),
 							7,
-							(new AspectList().add(Aspect.EXCHANGE, 16).add(Aspect.MAGIC, 32).add(WandType.aspect[i], 16)),
+							(new AspectList().add(Aspect.EXCHANGE, 16).add(Aspect.MAGIC, 32).add(Aspect.LIFE, 16).add(Aspect.HEAL, 16).add(WandType.aspect[i], 16)),
 							new ItemStack(ConfigItems.itemResource, 1, 3),
-							new ItemStack[] {/*TO-DO*/})
+							WandType.inputStack[i])
 			);
 		}
 	}

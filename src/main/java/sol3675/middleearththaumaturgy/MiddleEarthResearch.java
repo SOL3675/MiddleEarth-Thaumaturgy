@@ -853,7 +853,7 @@ public class MiddleEarthResearch {
 				"FOCUS_SUMMON_GONDOR",
 				"FREEPEOPLE",
 				(new AspectList()).add(MiddleEarthAspects.GONDOR, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
-				-7, -2, 2,
+				-8, -2, 2,
 				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 0))
 				)
 		.setPages(new ResearchPage[] {
@@ -862,6 +862,161 @@ public class MiddleEarthResearch {
 				}
 		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
 		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_HOBBIT",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.HOBBITS, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-8, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 1))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_HOBBIT.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonHOBBIT"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_RANGER_NORTH",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DUNEDAIN, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-9, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 2))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_RANGER_NORTH.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonRANGER_NORTH"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_BLUE_MOUNTAINS",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.BLUEMOUNTAINS, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-10, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 3))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_BLUE_MOUNTAINS.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonBLUE_MOUNTAINS"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_HIGH_ELF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.LINDON, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-11, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 4))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_HIGH_ELF.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonHIGH_ELF"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_WOOD_ELF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.WOODLAND, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-12, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 7))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_WOOD_ELF.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonWOOD_ELF"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_DALE",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DALE, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-13, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 9))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_DALE.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonDALE"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_DWARF",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DWARVES, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-14, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 10))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_DWARF.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonDWARF"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_GALADHRIM",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.LOTHLORIEN, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-14, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 11))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_GALADHRIM.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonGALADHRIM"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_FANGORN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.FANGORN, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-14, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 14))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_FANGORN.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonFANGORN"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_ROHAN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.ROHAN, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-13, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 15))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_ROHAN.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonROHAN"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_DORWINION",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.DORWINION, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-12, -5, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 17))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_DORWINION.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonDORWINION"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_TAUREDAIN",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.TAUREDAIN, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-11, -5, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 21))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_TAUREDAIN.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonTAUREDAIN"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
 	}
 
 	private static void addSauron()
@@ -1135,6 +1290,136 @@ public class MiddleEarthResearch {
 				}
 		).setSecondary()
 		.setParents(new String[] {"ROD_HALF_TROLL"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_GUNDABAD",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.GUNDABAD, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-8, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 5))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_GUNDABAD.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonGUNDABAD"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_ANGMAR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.ANGMAR, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-9, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 6))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_ANGMAR.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonANGMAR"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_DOL_GULDUR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.DOLGULDUR, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-10, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 8))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_DOL_GULDUR.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonDOL_GULDUR"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_DUNLAND",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.DUNLAND, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-11, 2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 12))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_DUNLAND.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonDUNLAND"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_URUK_HAI",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.ISENGARD, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-12, 1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 13))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_URUK_HAI.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonURUK_HAI"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_MORDOR",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.MORDOR, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-13, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 16))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_MORDOR.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonMORDOR"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_RHUN",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.RHUDEL, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-14, -1, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 18))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_RHUN.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonRHUN"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_NEAR_HARAD",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.NEARHARAD, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-13, -2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 19))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_NEAR_HARAD.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonNEAR_HARAD"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_MOREDAIN",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.MOREDAIN, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-12, -3, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 20))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_MOREDAIN.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonMOREDAIN"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_HALF_TROLL",
+				"SAURON",
+				(new AspectList()).add(MiddleEarthAspects.HALFTROLLS, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-11, -4, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 22))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_HALF_TROLL.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonHALF_TROLL"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
 	}
 
 	private static void addTTCompatResearch()
