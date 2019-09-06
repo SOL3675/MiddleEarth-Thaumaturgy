@@ -111,9 +111,9 @@ public class ItemSummonFocus extends ItemMETTFocus
 		{
 			return itemStack;
 		}
-		int x = pos.blockX;
-		int y = pos.blockY;
-		int z = pos.blockZ;
+		double x = pos.blockX;
+		double y = pos.blockY;
+		double z = pos.blockZ;
 		
 		float alignmentValue = LOTRLevelData.getData(player).getAlignment(WandType.faction[factionId]);
 		
@@ -138,7 +138,7 @@ public class ItemSummonFocus extends ItemMETTFocus
 				}
 				case 3:
 				{
-					++z;
+					z = z + 1.5;
 					break;
 				}
 				case 4:
@@ -148,7 +148,7 @@ public class ItemSummonFocus extends ItemMETTFocus
 				}
 				case 5:
 				{
-					++x;
+					x = x + 1.5;
 					break;
 				}
 			}
@@ -170,7 +170,7 @@ public class ItemSummonFocus extends ItemMETTFocus
 			npc.liftSpawnRestrictions = true;
 			
 			Event.Result canSpawn = ForgeEventFactory.canEntitySpawn(npc, world, (float)npc.posX, (float)npc.posY, (float)npc.posZ);
-			if(((canSpawn == Event.Result.ALLOW) || ((canSpawn == Event.Result.DEFAULT) && (npc.getCanSpawnHere()))) && wand.consumeAllVis(itemStack, player, this.getVisCost(itemStack), true, false))
+			if(((canSpawn == Event.Result.ALLOW) || ((canSpawn == Event.Result.DEFAULT)/* && (npc.getCanSpawnHere())*/)) && wand.consumeAllVis(itemStack, player, this.getVisCost(itemStack), true, false))
 			{
 				npc.liftSpawnRestrictions = false;
 				npc.onSpawnWithEgg(null);
