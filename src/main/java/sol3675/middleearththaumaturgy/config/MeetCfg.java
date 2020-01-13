@@ -16,8 +16,8 @@ public class MeetCfg {
 	public static int extralargeJarCapacity = Integer.MAX_VALUE;
 	
 	public static boolean easyFactionCrafter = false;
-	
 	public static boolean focusCanSpawnBombardier = false;
+	public static boolean cheatFactionRecipe = false;
 	
 	public static boolean automagy = true;
 	public static boolean thaumictinkerer = true;
@@ -39,8 +39,8 @@ public class MeetCfg {
 			extralargeJarCapacity = cfg.get("general", "ExtralargeJarCapacity", extralargeJarCapacity, "Capacity of Extralarge Jar").getInt(extralargeJarCapacity);
 			
 			easyFactionCrafter = cfg.get("general", "AvailableEasyRecipeOfCrafter", easyFactionCrafter, "Enable to add easy way to craft HandheldFactionCrafter").getBoolean(false);
-			
 			focusCanSpawnBombardier = cfg.get("general", "SummonFocusCanSpawnBombardier", focusCanSpawnBombardier, "Set true if you want to summon bombardier").getBoolean(false);
+			cheatFactionRecipe = cfg.get("general", "CheatingFactionRecie", cheatFactionRecipe, "Set true to be able to craft lotr recipes without alignment on handheldcrafter").getBoolean(false);
 			
 			automagy = cfg.getBoolean("automagyCompat", "Compat", true, "Disable to force remove automagy compat");
 			thaumictinkerer = cfg.getBoolean("thaumictinkererCompat", "Compat", true, "Disable to force remove thaumictinkerer compat");

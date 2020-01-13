@@ -441,6 +441,19 @@ public class MiddleEarthResearch {
 				new ResearchPage((InfusionRecipe) recipes.get("HandheldCrafter"))
 				}
 		).setParents(new String[] {"INFUSION"}).registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_BEDROCK_REMOVER",
+				"MIDDLEEARTH",
+				(new AspectList()).add(Aspect.ENTROPY, 10).add(Aspect.VOID, 5).add(MiddleEarthAspects.IMMORTAL, 5),
+				-7, 2, 3,
+				new ItemStack(MiddleEarthThaumaturgyItems.bedrockRemoveFoci))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_BEDROCK_REMOVER.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("FocusBedrockRemover"))
+				}
+		).setParents(new String[] {"FOCUSPORTABLEHOLE", "STAREDMITHRIL"}).registerResearchItem();
 
 		(new MiddleEarthResearchItem(
 				"GEMTRANSMETT",

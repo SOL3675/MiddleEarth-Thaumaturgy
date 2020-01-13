@@ -26,10 +26,11 @@ public abstract class ItemMETTFocus extends ItemFocusBasic
 		return this.name;
 	}
 	
-	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister register)
+	@Override
+	public void registerIcons(IIconRegister ir)
 	{
-		register.registerIcon(LibMisc.MODFULLID + ":focus_" + getName());
+		this.icon = ir.registerIcon(LibMisc.MODFULLID + ":focus_" + name);
 	}
+	
 }

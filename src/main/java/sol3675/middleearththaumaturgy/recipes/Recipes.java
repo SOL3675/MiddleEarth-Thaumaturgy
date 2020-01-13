@@ -544,6 +544,15 @@ public class Recipes {
 							WandType.inputStack[i])
 			);
 		}
+		
+		MiddleEarthResearch.recipes.put("FocusBedrockRemover",
+				ThaumcraftApi.addInfusionCraftingRecipe("FOCUS_BEDROCK_REMOVER",
+						new ItemStack(MiddleEarthThaumaturgyItems.bedrockRemoveFoci),
+						9,
+						(new AspectList().add(Aspect.ENTROPY, 64).add(Aspect.DARKNESS, 32).add(Aspect.VOID, 32).add(MiddleEarthAspects.IMMORTAL, 16).add(MiddleEarthAspects.UTUMNO, 16)),
+						new ItemStack(ConfigItems.itemFocusPortableHole),
+						new ItemStack[] {new ItemStack(LOTRMod.millstone), new ItemStack(LOTRMod.blockGem, 1, 5), new ItemStack(MiddleEarthThaumaturgyItems.materials, 1, 5)})
+		);
 	}
 
 	private static void addTransmutaionRecipes()

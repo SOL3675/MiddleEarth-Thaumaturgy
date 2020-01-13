@@ -226,6 +226,7 @@ item.focus_summon.NEAR_HARAD.name=Wand Focus: Summon Haradrim
 item.focus_summon.MOREDAIN.name=Wand Focus: Summon Morwaith
 item.focus_summon.TAUREDAIN.name=Wand Focus: Summon Taurethrim
 item.focus_summon.HALF_TROLL.name=Wand Focus: Summon Pertorog
+item.focus_bedrock_remover.name=Wand Focus: Bedrock Shatterer
 #
 item.mett:titleItem.name=Title Scroll
 mett.title_freePeoples=Free Peoples
@@ -610,6 +611,9 @@ middleearththaumaturgy.research_page.FOCUS_SUMMON_TAUREDAIN.1=You can spawn Taur
 middleearththaumaturgy.research_name.FOCUS_SUMMON_HALF_TROLL=Pertorog Summon Focus
 middleearththaumaturgy.research_textFOCUS_SUMMON_HALF_TROLL=Pertorog Summon Focus
 middleearththaumaturgy.research_page.FOCUS_SUMMON_HALF_TROLL.1=You can spawn Pertorog Soldiers.<BR>You need at least 100 alignment value to summon. If you have 500 of it, the chance to spawn elite soldiers is increased.
+middleearththaumaturgy.research_name.FOCUS_BEDROCK_REMOVER=Bedrock Shatterer Focus
+middleearththaumaturgy.research_textFOCUS_BEDROCK_REMOVER=Remove Bedrocks!
+middleearththaumaturgy.research_page.FOCUS_BEDROCK_REMOVER.1=You can now remove bedrocks!<BR>You cannot remove bottom layer.
 #
 middleearththaumaturgy.research_name.COMP_JAR=Compressed Warded Jar
 middleearththaumaturgy.research_textCOMP_JAR=More Essentia!
@@ -642,6 +646,33 @@ middleearththaumaturgy.research_page.GULDURILTRANS.1=Duplicating Gulduril with c
 #
 #GUI
 container.crafter=Handheld Faction Crafter
+container.crafting.morgul=Morgul Crafting
+container.crafting.galadhrim=Galadhrim Crafting
+container.crafting.dwarven=Dwarven Crafting
+container.crafting.uruk=Uruk Crafting
+container.crafting.gondorian=Gondorian Crafting
+container.crafting.rohirric=Rohirric Crafting
+container.crafting.wood_elf=Wood-elven Crafting
+container.crafting.dunlending=Dunlending Crafting
+container.crafting.angmar=Angmar Crafting
+container.crafting.haradric=Haradric Crafting
+container.crafting.lindon=Lindon Crafting
+container.crafting.blueDwarven=Blue Mountains Crafting
+container.crafting.ranger=Ranger Crafting
+container.crafting.dol_guldur=Dol Guldur Crafting
+container.crafting.gundabad=Gundabad Crafting
+container.crafting.halfTroll=Half-troll Crafting
+container.crafting.dol_amroth=Dol Amroth Crafting
+container.crafting.moredain=Morwaith Crafting
+container.crafting.tauredain=Taurethrim Crafting
+container.crafting.dale=Dalish Crafting
+container.crafting.dorwinion=Dorwinion Crafting
+container.crafting.hobbit=Hobbit Crafting
+container.crafting.rhun=Rhûnic Crafting
+container.crafting.rivendell=Rivendell Crafting
+container.crafting.umbar=Umbaric Crafting
+container.crafting.gulf=Gulfen Crafting
+
 #
 #chat message
 mett.chat.nocrafter=No Crafting Table Avilable!

@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import sol3675.middleearththaumaturgy.MiddleEarthThaumaturgy;
 import sol3675.middleearththaumaturgy.common.items.baubles.ItemRingWarpward;
+import sol3675.middleearththaumaturgy.common.items.focis.ItemBedrockRemoverFocus;
 import sol3675.middleearththaumaturgy.common.items.focis.ItemSummonFocus;
 import sol3675.middleearththaumaturgy.common.items.wands.FactionWandUpdate;
 import sol3675.middleearththaumaturgy.common.items.wands.ItemStaffCores;
@@ -32,6 +33,7 @@ public class MiddleEarthThaumaturgyItems {
 	public static Item staffCore;
 	public static Item wandCap;
 	public static Item summonFoci;
+	public static Item bedrockRemoveFoci;
 
 	public static WandRod[] WAND_ROD;
 
@@ -72,6 +74,8 @@ public class MiddleEarthThaumaturgyItems {
 		
 		summonFoci = new ItemSummonFocus();
 		GameRegistry.registerItem(summonFoci, "focusSummoning");
+		bedrockRemoveFoci = new ItemBedrockRemoverFocus();
+		GameRegistry.registerItem(bedrockRemoveFoci, "focusBedrockRemover");
 		
 		WAND_ROD = new WandRod[WandType.types.length];
 		STAFF_ROD = new StaffRod[WandType.types.length];
