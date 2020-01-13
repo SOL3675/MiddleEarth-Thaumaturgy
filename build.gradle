@@ -22,7 +22,7 @@ compileJava {
     sourceCompatibility = targetCompatibility = "1.8"
 }
 
-version = "0.7.2 for v35.4"
+version = "0.7.2_a for v35.4"
 group= "com.sol3675.middleearththaumaturgy"
 archivesBaseName = "middleearththaumaturgy"
 
