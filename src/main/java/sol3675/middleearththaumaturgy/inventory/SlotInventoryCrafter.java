@@ -25,7 +25,7 @@ public class SlotInventoryCrafter extends Slot{
 				getStack().getItem() == item.getItemFromBlock(LOTRMod.woodElvenTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.dolGuldurTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.daleTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.dwarvenTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.elvenTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.dunlendingTable) ||
 				getStack().getItem() == item.getItemFromBlock(LOTRMod.urukTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.rohirricTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.gondorianTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.dolAmrothTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.morgulTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.dorwinionTable) ||
 				getStack().getItem() == item.getItemFromBlock(LOTRMod.rhunTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.nearHaradTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.moredainTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.tauredainTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.halfTrollTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.rivendellTable) ||
-				getStack().getItem() == item.getItemFromBlock(LOTRMod.umbarTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.gulfTable))
+				getStack().getItem() == item.getItemFromBlock(LOTRMod.umbarTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.gulfTable) || getStack().getItem() == item.getItemFromBlock(LOTRMod.breeTable))
 		{
 			return true;
 		}

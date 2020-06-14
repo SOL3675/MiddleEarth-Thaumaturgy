@@ -119,7 +119,7 @@ public abstract class CraftTablesContainer extends ContainerWorkbench
 	{
 		public Dwarven(InventoryPlayer inventory, World world, int x, int y, int z)
 		{
-			super(inventory, world, x, y, z, LOTRRecipes.dwarvenRecipes, LOTRFaction.DWARF);
+			super(inventory, world, x, y, z, LOTRRecipes.dwarvenRecipes, LOTRFaction.DURINS_FOLK);
 		}
 	}
 	
@@ -127,7 +127,7 @@ public abstract class CraftTablesContainer extends ContainerWorkbench
 	{
 		public Galadhrim(InventoryPlayer inventory, World world, int x, int y, int z)
 		{
-			super(inventory, world, x, y, z, LOTRRecipes.elvenRecipes, LOTRFaction.GALADHRIM);
+			super(inventory, world, x, y, z, LOTRRecipes.elvenRecipes, LOTRFaction.LOTHLORIEN);
 		}
 	}
 	
@@ -143,7 +143,7 @@ public abstract class CraftTablesContainer extends ContainerWorkbench
 	{
 		public Uruk(InventoryPlayer inventory, World world, int x, int y, int z)
 		{
-			super(inventory, world, x, y, z, LOTRRecipes.urukRecipes, LOTRFaction.URUK_HAI);
+			super(inventory, world, x, y, z, LOTRRecipes.urukRecipes, LOTRFaction.ISENGARD);
 		}
 	}
 	
@@ -191,7 +191,7 @@ public abstract class CraftTablesContainer extends ContainerWorkbench
 	{
 		public Rhunic(InventoryPlayer inventory, World world, int x, int y, int z)
 		{
-			super(inventory, world, x, y, z, LOTRRecipes.rhunRecipes, LOTRFaction.RHUN);
+			super(inventory, world, x, y, z, LOTRRecipes.rhunRecipes, LOTRFaction.RHUDEL);
 		}
 	}
 	
@@ -207,7 +207,7 @@ public abstract class CraftTablesContainer extends ContainerWorkbench
 	{
 		public Moredain(InventoryPlayer inventory, World world, int x, int y, int z)
 		{
-			super(inventory, world, x, y, z, LOTRRecipes.moredainRecipes, LOTRFaction.MOREDAIN);
+			super(inventory, world, x, y, z, LOTRRecipes.moredainRecipes, LOTRFaction.MORWAITH);
 		}
 	}
 	
@@ -215,7 +215,7 @@ public abstract class CraftTablesContainer extends ContainerWorkbench
 	{
 		public Tauredain(InventoryPlayer inventory, World world, int x, int y, int z)
 		{
-			super(inventory, world, x, y, z, LOTRRecipes.tauredainRecipes, LOTRFaction.TAUREDAIN);
+			super(inventory, world, x, y, z, LOTRRecipes.tauredainRecipes, LOTRFaction.TAURETHRIM);
 		}
 	}
 	
@@ -248,6 +248,14 @@ public abstract class CraftTablesContainer extends ContainerWorkbench
 		public Gulfen(InventoryPlayer inventory, World world, int x, int y, int z)
 		{
 			super(inventory, world, x, y, z, LOTRRecipes.gulfRecipes, LOTRFaction.NEAR_HARAD);
+		}
+	}
+	
+	public static class Bree extends CraftTablesContainer
+	{
+		public Bree(InventoryPlayer inventory, World world, int x, int y, int z)
+		{
+			super(inventory, world, x, y, z, LOTRRecipes.breeRecipes, LOTRFaction.BREE);
 		}
 	}
 }

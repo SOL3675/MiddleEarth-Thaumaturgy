@@ -154,24 +154,24 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.dwarvenTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DWARF)>=1.0F || MeetCfg.cheatFactionRecipe)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.DURINS_FOLK)>=1.0F || MeetCfg.cheatFactionRecipe)
 				{
 					player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.DWARVEN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
 				else
 				{
-					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.DWARF);
+					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.DURINS_FOLK);
 				}
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.elvenTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.GALADHRIM)>=1.0F || MeetCfg.cheatFactionRecipe)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.LOTHLORIEN)>=1.0F || MeetCfg.cheatFactionRecipe)
 				{
 					player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.GALADHRIM, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
 				else
 				{
-					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.GALADHRIM);
+					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.LOTHLORIEN);
 				}
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.dunlendingTable)))
@@ -187,13 +187,13 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.urukTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.URUK_HAI)>=1.0F || MeetCfg.cheatFactionRecipe)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.ISENGARD)>=1.0F || MeetCfg.cheatFactionRecipe)
 				{
 					player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.URUK, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
 				else
 				{
-					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.URUK_HAI);
+					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.ISENGARD);
 				}
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.rohirricTable)))
@@ -253,13 +253,13 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.rhunTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.RHUN)>=1.0F || MeetCfg.cheatFactionRecipe)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.RHUDEL)>=1.0F || MeetCfg.cheatFactionRecipe)
 				{
 					player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.RHUNIC, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
 				else
 				{
-					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.RHUN);
+					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.RHUDEL);
 				}
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.nearHaradTable)))
@@ -275,24 +275,24 @@ public class ItemHandheldFactionCrafter extends Item{
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.moredainTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.MOREDAIN)>=1.0F || MeetCfg.cheatFactionRecipe)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.MORWAITH)>=1.0F || MeetCfg.cheatFactionRecipe)
 				{
 					player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.MOREDAIN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
 				else
 				{
-					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.MOREDAIN);
+					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.MORWAITH);
 				}
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.tauredainTable)))
 			{
-				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.TAUREDAIN)>=1.0F || MeetCfg.cheatFactionRecipe)
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.TAURETHRIM)>=1.0F || MeetCfg.cheatFactionRecipe)
 				{
 					player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.TAUREDAIN, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
 				}
 				else
 				{
-					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.TAUREDAIN);
+					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.TAURETHRIM);
 				}
 			}
 			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.halfTrollTable)))
@@ -337,6 +337,17 @@ public class ItemHandheldFactionCrafter extends Item{
 				else
 				{
 					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.NEAR_HARAD);
+				}
+			}
+			else if(firstItem.isItemEqual(new ItemStack(LOTRMod.breeTable)))
+			{
+				if(LOTRLevelData.getData(player).getAlignment(LOTRFaction.BREE)>= 1.0F || MeetCfg.cheatFactionRecipe)
+				{
+					player.openGui(MiddleEarthThaumaturgy.instance, GuiIDs.BREE, world, MathHelper.ceiling_double_int(player.posX), MathHelper.ceiling_double_int(player.posY), MathHelper.ceiling_double_int(player.posZ));
+				}
+				else
+				{
+					LOTRAlignmentValues.notifyAlignmentNotHighEnough(player, 1, LOTRFaction.BREE);
 				}
 			}
 		}

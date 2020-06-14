@@ -240,4 +240,12 @@ public abstract class CraftTablesGuiContainer extends GuiContainer
 			super(new CraftTablesContainer.Gulfen(inventory, world, i, j, k), "gulf");
 		}
 	}
+	
+	public static class Bree extends CraftTablesGuiContainer
+	{
+		public Bree(InventoryPlayer inventory, World world, int i, int j, int k)
+		{
+			super(new CraftTablesContainer.Bree(inventory, world, i, j, k), "bree");
+		}
+	}
 }

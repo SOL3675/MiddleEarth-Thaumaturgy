@@ -33,7 +33,8 @@ public class WandType {
 			"NEAR_HARAD",
 			"MOREDAIN",
 			"TAUREDAIN",
-			"HALF_TROLL"
+			"HALF_TROLL",
+			"BREE"
 		};
 	
 	public final static LOTRFaction[] faction =
@@ -48,26 +49,27 @@ public class WandType {
 				LOTRFaction.WOOD_ELF,
 				LOTRFaction.DOL_GULDUR,
 				LOTRFaction.DALE,
-				LOTRFaction.DWARF,
-				LOTRFaction.GALADHRIM,
+				LOTRFaction.DURINS_FOLK,
+				LOTRFaction.LOTHLORIEN,
 				LOTRFaction.DUNLAND,
-				LOTRFaction.URUK_HAI,
+				LOTRFaction.ISENGARD,
 				LOTRFaction.FANGORN,
 				LOTRFaction.ROHAN,
 				LOTRFaction.MORDOR,
 				LOTRFaction.DORWINION,
-				LOTRFaction.RHUN,
+				LOTRFaction.RHUDEL,
 				LOTRFaction.NEAR_HARAD,
-				LOTRFaction.MOREDAIN,
-				LOTRFaction.TAUREDAIN,
-				LOTRFaction.HALF_TROLL
+				LOTRFaction.MORWAITH,
+				LOTRFaction.TAURETHRIM,
+				LOTRFaction.HALF_TROLL,
+				LOTRFaction.BREE
 		};
 	
 	private static final String F = "FREEPEOPLE";
 	private static final String S = "SAURON";
 	
 	public static final String[] category =
-		{F, F, F, F, F, S, S, F, S, F, F, F, S, S, F, F, S, F, S, S, S, F, S};
+		{F, F, F, F, F, S, S, F, S, F, F, F, S, S, F, F, S, F, S, S, S, F, S, F};
 	
 	public final static String[] typesName = 
 		{
@@ -93,7 +95,8 @@ public class WandType {
 			"near_harad",
 			"moredain",
 			"tauredain",
-			"half_troll"
+			"half_troll",
+			"bree"
 		};
 	
 	public static final Aspect[] aspect =
@@ -120,7 +123,8 @@ public class WandType {
 				MiddleEarthAspects.NEARHARAD,
 				MiddleEarthAspects.MOREDAIN,
 				MiddleEarthAspects.TAUREDAIN,
-				MiddleEarthAspects.HALFTROLLS
+				MiddleEarthAspects.HALFTROLLS,
+				MiddleEarthAspects.BREE
 		};
 	
 	public static ItemStack[][] inputStack =
@@ -147,7 +151,8 @@ public class WandType {
 				{new ItemStack(LOTRMod.bodyNearHarad), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 9)},
 				{new ItemStack(LOTRMod.bodyMoredain), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 17)},
 				{new ItemStack(LOTRMod.bodyTauredain), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 18)},
-				{new ItemStack(LOTRMod.bodyHalfTroll), new ItemStack(LOTRMod.trollBone), new ItemStack(LOTRMod.trollBone), new ItemStack(LOTRMod.banner, 1, 15)}
+				{new ItemStack(LOTRMod.bodyHalfTroll), new ItemStack(LOTRMod.trollBone), new ItemStack(LOTRMod.trollBone), new ItemStack(LOTRMod.banner, 1, 15)},
+				{new ItemStack(Items.leather_chestplate), new ItemStack(Items.bone), new ItemStack(Items.bone), new ItemStack(LOTRMod.banner, 1, 41)},
 		};
 	
 	public static final int[] color =
@@ -174,6 +179,7 @@ public class WandType {
 				0xed310b,
 				0xe0b869,
 				0x1d6038,
-				0x8c7f5b
+				0x8c7f5b,
+				0x2b681c
 		};
 }

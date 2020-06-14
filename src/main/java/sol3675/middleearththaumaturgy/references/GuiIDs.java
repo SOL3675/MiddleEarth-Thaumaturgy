@@ -28,4 +28,5 @@ public class GuiIDs {
 	public static final int RIVENDELL = 24;
 	public static final int UMBARIC = 25;
 	public static final int GULFEN = 26;
+	public static final int BREE = 27;
 }

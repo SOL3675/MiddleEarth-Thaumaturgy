@@ -519,6 +519,18 @@ public class Recipes {
 						)
 				)
 		;
+		
+		MiddleEarthResearch.recipes.put("RodBREE",
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_BREE",
+						new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 23),
+						6,
+						(new AspectList().add(Aspect.MAGIC, 8).add(MiddleEarthAspects.BREE, 24)),
+						new ItemStack(ConfigItems.itemWandRod, 1, 2),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 41), new ItemStack(LOTRMod.cobblebrick), new ItemStack(LOTRMod.amber)}
+						)
+				)
+		;
 
 		for(int i = 0; i<WandType.types.length; ++i)
 		{

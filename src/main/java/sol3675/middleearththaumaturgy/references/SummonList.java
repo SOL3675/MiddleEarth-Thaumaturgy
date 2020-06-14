@@ -20,19 +20,20 @@ public enum SummonList
 	WOOD_ELF(LOTRFaction.WOOD_ELF),
 	DOL_GULDUR(LOTRFaction.DOL_GULDUR),
 	DALE(LOTRFaction.DALE),
-	DWARF(LOTRFaction.DWARF),
-	GALADHRIM(LOTRFaction.GALADHRIM),
+	DWARF(LOTRFaction.DURINS_FOLK),
+	GALADHRIM(LOTRFaction.LOTHLORIEN),
 	DUNLAND(LOTRFaction.DUNLAND),
-	URUK_HAI(LOTRFaction.URUK_HAI),
+	URUK_HAI(LOTRFaction.ISENGARD),
 	FANGORN(LOTRFaction.FANGORN),
 	ROHAN(LOTRFaction.ROHAN),
 	MORDOR(LOTRFaction.MORDOR),
 	DORWINION(LOTRFaction.DORWINION),
-	RHUN(LOTRFaction.RHUN),
+	RHUN(LOTRFaction.RHUDEL),
 	NEAR_HARAD(LOTRFaction.NEAR_HARAD),
-	MOREDAIN(LOTRFaction.MOREDAIN),
-	TAUREDAIN(LOTRFaction.TAUREDAIN),
-	HALF_TROLL(LOTRFaction.HALF_TROLL);
+	MOREDAIN(LOTRFaction.MORWAITH),
+	TAUREDAIN(LOTRFaction.TAURETHRIM),
+	HALF_TROLL(LOTRFaction.HALF_TROLL),
+	BREE(LOTRFaction.BREE);
 	
 	public final LOTRFaction faction;
 	public List<SummonSpawnEntry> MobsTier1 = new ArrayList();
@@ -189,6 +190,10 @@ public enum SummonList
 		HALF_TROLL.MobsTier1.add(new SummonSpawnEntry(LOTREntityHalfTrollWarrior.class, 15));
 		initTier2(HALF_TROLL);
 		HALF_TROLL.MobsTier2.add(new SummonSpawnEntry(LOTREntityHalfTrollBannerBearer.class, 2));
+		
+		BREE.MobsTier1.add(new SummonSpawnEntry(lotr.common.entity.npc.LOTREntityBreeGuard.class, 15));
+		initTier2(BREE);
+		BREE.MobsTier2.add(new SummonSpawnEntry(lotr.common.entity.npc.LOTREntityBreeBannerBearer.class, 2));
 	}
 	
 	public static class SummonSpawnEntry extends WeightedRandom.Item

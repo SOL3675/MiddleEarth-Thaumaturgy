@@ -44,6 +44,7 @@ public class MiddleEarthAspects {
 	public static Aspect TAUREDAIN;
 	public static Aspect HALFTROLLS;
 	public static Aspect UTUMNO;
+	public static Aspect BREE;
 	
 
 	public static void initAspects() {
@@ -88,6 +89,8 @@ public class MiddleEarthAspects {
 		UTUMNO = new Aspect("utumno", 0x2d0404, new Aspect[] { BALROGS, Aspect.ELDRITCH }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/utumno.png"),1);
 		
 		NAZGULS = new Aspect("nazgul", 0x073513, new Aspect[] { ANGMAR, Aspect.SOUL }, new ResourceLocation("middleearththaumaturgy", "textures/aspects/nazgul.png"),1);
+		
+		BREE = new Aspect("bree", 0x2b681c, new Aspect[] {MEN, HOBBITS}, new ResourceLocation("middleearththaumaturgy", "textures/aspects/bree.png"), 1);
 
 	}
 }

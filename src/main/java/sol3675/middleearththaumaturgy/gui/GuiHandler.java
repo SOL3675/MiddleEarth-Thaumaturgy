@@ -234,6 +234,10 @@ public class GuiHandler implements IGuiHandler{
 		{
 			return new CraftTablesGuiContainer.Gulfen(player.inventory, world, x, y, z);
 		}
+		if(ID == GuiIDs.BREE)
+		{
+			return new CraftTablesGuiContainer.Bree(player.inventory, world, x, y, z);
+		}
 		return null;
 	}
 

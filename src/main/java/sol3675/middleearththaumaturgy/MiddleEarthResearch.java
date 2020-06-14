@@ -861,6 +861,33 @@ public class MiddleEarthResearch {
 		).setSecondary()
 		.setParents(new String[] {"ROD_TAUREDAIN"}).setConcealed().registerResearchItem();
 		
+		(new MiddleEarthResearchItem(
+				"ROD_BREE",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.BREE, 5).add(Aspect.MAGIC, 1),
+				-4, 0, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.wandCore, 1, 23))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_BREE.1"),
+				new ResearchPage((InfusionRecipe) recipes.get("RodBREE"))
+				}
+		).setParents(new String[] {"ROD_silverwood"}).setConcealed().registerResearchItem();
+
+		(new MiddleEarthResearchItem(
+				"ROD_BREE_staff",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.BREE, 5).add(Aspect.AURA, 2).add(MiddleEarthAspects.MEN, 3),
+				-4, 2, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.staffCore, 1, 23))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.ROD_BREE_staff.1"),
+				new ResearchPage((IArcaneRecipe) recipes.get("StaffBREE"))
+				}
+		).setSecondary()
+		.setParents(new String[] {"ROD_BREE"}).setConcealed().registerResearchItem();
+		
 		
 		(new MiddleEarthResearchItem(
 				"FOCUS_SUMMON_GONDOR",
@@ -1028,6 +1055,19 @@ public class MiddleEarthResearch {
 		.setPages(new ResearchPage[] {
 				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_TAUREDAIN.1"),
 				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonTAUREDAIN"))
+				}
+		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
+		
+		(new MiddleEarthResearchItem(
+				"FOCUS_SUMMON_BREE",
+				"FREEPEOPLE",
+				(new AspectList()).add(MiddleEarthAspects.BREE, 8).add(Aspect.EXCHANGE, 4).add(Aspect.MAGIC, 4),
+				-10, -5, 2,
+				new ItemStack(MiddleEarthThaumaturgyItems.summonFoci, 1, 23))
+				)
+		.setPages(new ResearchPage[] {
+				new ResearchPage("middleearththaumaturgy.research_page.FOCUS_SUMMON_BREE.1"),
+				new ResearchPage((InfusionRecipe)recipes.get("FocusSummonBREE"))
 				}
 		).setParents(new String[] {"FOCUSFIRE"}).setConcealed().registerResearchItem();
 	}
@@ -1618,6 +1658,14 @@ public class MiddleEarthResearch {
 				(new AspectList()).add(MiddleEarthAspects.HALFTROLLS, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(MiddleEarthAspects.TROLLS, 13),
 				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
 				5, -5, 3, 1,
+				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
+				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
+				false, false, true);
+		++i;
+		ResearchHelper.add("ROD_" + WandType.types[i] + "_TT", WandType.category[i],
+				(new AspectList()).add(MiddleEarthAspects.BREE, 5).add(Aspect.MAGIC, 1).add(MiddleEarthAspects.MEN, 8).add(Aspect.CLOTH, 13),
+				new ItemStack(ItemTTCompat.wandCoreTT, 1, i),
+				-4, 4, 3, 1,
 				new String[] {"ROD_" + WandType.types[i], "ROD_ICHORCLOTH"},
 				ResearchHelper.INFUSION, "Rod" + WandType.types[i] + "_TT",
 				false, false, true);
