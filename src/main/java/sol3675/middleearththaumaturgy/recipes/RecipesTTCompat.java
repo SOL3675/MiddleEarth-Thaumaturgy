@@ -297,6 +297,18 @@ public class RecipesTTCompat {
 						)
 				)
 		;
+		
+		MiddleEarthResearch.recipes.put("RodBREE_TT",
+				ThaumcraftApi.addInfusionCraftingRecipe(
+						"ROD_BREE_TT",
+						new ItemStack(ItemTTCompat.wandCoreTT, 1, 23),
+						9,
+						(new AspectList().add(Aspect.MAGIC, 64).add(MiddleEarthAspects.BREE, 128)),
+						new ItemStack(GameRegistry.findItem("ThaumicTinkerer", "kamiResource"), 1, 5),
+						new ItemStack[] {new ItemStack(LOTRMod.banner, 1, 41), new ItemStack(LOTRMod.cobblebrick), new ItemStack(LOTRMod.amber)}
+						)
+				)
+		;
 	}
 
 	private static void addStaffRecipes()
